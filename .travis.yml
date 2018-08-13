@@ -1,5 +1,3 @@
 language: objective-c
-xcode_project: Power.xcodeproj
-xcode_scheme: Power-iOS
 script: 
 	- xcodebuild clean test -project Power.xcodeproj -scheme Power-iOS -destination "platform=iOS Simulator,name=iPhone 7" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
