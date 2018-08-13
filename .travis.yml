@@ -1,3 +1,4 @@
 language: objective-c
-script: 
-	- xcodebuild clean test -project Power.xcodeproj -scheme Power-iOS -destination "platform=iOS Simulator,name=iPhone 7" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
+script:
+   - carthage bootstrap 
+   - xcodebuild clean test -project Power.xcodeproj -scheme Power-iOS -destination "platform=iOS Simulator,name=iPhone 7" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
