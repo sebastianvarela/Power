@@ -2,6 +2,8 @@
 import XCTest
 
 public class DateExtensionsTests: XCTestCase {
+    private let timeZone = TimeZone(secondsFromGMT: 0)
+    
     public func testDateByAddingComponent() {
         let date = Date(timeIntervalSince1970: 1_523_190_896) //08-04-2018
         let datePlusOneMinute = Date(timeIntervalSince1970: 1_523_190_956) //08-04-2018
@@ -20,37 +22,37 @@ public class DateExtensionsTests: XCTestCase {
     public func testConversionFromDateToSpanishFormattedDate() {
         let date = Date(timeIntervalSince1970: 1_523_190_896)
         
-        XCTAssertEqual(date.formattedSpanishDateString, "08/04/2018")
+        XCTAssertEqual(date.formattedSpanishDateString(timeZone: timeZone), "08/04/2018")
     }
     
     public func testConversionFromDateToFormattedShortDateInSpanish() {
         let date = Date(timeIntervalSince1970: 1_523_190_896)
         
-        XCTAssertEqual(date.formattedShortDateString(locale: .spanish), "08 abr")
+        XCTAssertEqual(date.formattedShortDateString(locale: .spanish, timeZone: timeZone), "08 abr")
     }
 
     public func testConversionFromDateToFormattedShortDateInEnglish() {
         let date = Date(timeIntervalSince1970: 1_523_190_896)
         
-        XCTAssertEqual(date.formattedShortDateString(locale: .english), "08 apr")
+        XCTAssertEqual(date.formattedShortDateString(locale: .english, timeZone: timeZone), "08 apr")
     }
 
     public func testConversionFromDateToFormattedShortDateTimeInEnglish() {
         let date = Date(timeIntervalSince1970: 1_523_190_896)
         
-        XCTAssertEqual(date.formattedShortDateTimeString(locale: .english), "08 apr ● 14:34")
+        XCTAssertEqual(date.formattedShortDateTimeString(locale: .english, timeZone: timeZone), "08 apr ● 12:34")
     }
     
     public func testConversionFromDateToMonthYearStringInSpanish() {
         let date = Date(timeIntervalSince1970: 1_523_190_896)
         
-        XCTAssertEqual(date.formattedMonthYearString(locale: .spanish), "Abril 2018")
+        XCTAssertEqual(date.formattedMonthYearString(locale: .spanish, timeZone: timeZone), "Abril 2018")
     }
 
     public func testConversionFromDateToMonthYearStringInEnglish() {
         let date = Date(timeIntervalSince1970: 1_523_190_896)
         
-        XCTAssertEqual(date.formattedMonthYearString(locale: .english), "April 2018")
+        XCTAssertEqual(date.formattedMonthYearString(locale: .english, timeZone: timeZone), "April 2018")
     }
     
     public func testTotalDays() {
