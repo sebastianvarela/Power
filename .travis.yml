@@ -1,0 +1,4 @@
+language: objective-c
+script:
+   - carthage bootstrap --platform iOS --configuration Debug --no-use-binaries --cache-builds
+   - fastlane scan

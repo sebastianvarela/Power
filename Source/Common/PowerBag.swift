@@ -8,5 +8,6 @@ public class PowerBag {
 
     }
     
-    public let userDefinedLocale = MutableProperty<Locale>(.spanish)
+    public let locale = MutableProperty<Locale>(Locale.current)
+    public let timeZone = MutableProperty<TimeZone>(TimeZone.current)
 }

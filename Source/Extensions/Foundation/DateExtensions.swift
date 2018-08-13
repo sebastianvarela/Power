@@ -36,33 +36,37 @@ public extension Date {
         return newDate
     }
     
-    public var formattedSpanishDateString: String {
+    public func formattedSpanishDateString(timeZone: TimeZone? = nil) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.timeZone = timeZone ?? PowerBag.shared.timeZone.value
         let converted = dateFormatter.string(from: self)
         return converted
     }
     
-    public func formattedShortDateString(locale: Locale? = nil) -> String {
+    public func formattedShortDateString(locale: Locale? = nil, timeZone: TimeZone? = nil) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM"
-        dateFormatter.locale = locale ?? PowerBag.shared.userDefinedLocale.value
+        dateFormatter.locale = locale ?? PowerBag.shared.locale.value
+        dateFormatter.timeZone = timeZone ?? PowerBag.shared.timeZone.value
         let converted = dateFormatter.string(from: self)
         return converted.lowercased()
     }
     
-    public func formattedShortDateTimeString(locale: Locale? = nil) -> String {
+    public func formattedShortDateTimeString(locale: Locale? = nil, timeZone: TimeZone? = nil) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM ● HH:mm"
-        dateFormatter.locale = locale ?? PowerBag.shared.userDefinedLocale.value
+        dateFormatter.locale = locale ?? PowerBag.shared.locale.value
+        dateFormatter.timeZone = timeZone ?? PowerBag.shared.timeZone.value
         let converted = dateFormatter.string(from: self)
         return converted.lowercased()
     }
     
-    public func formattedMonthYearString(locale: Locale? = nil) -> String {
+    public func formattedMonthYearString(locale: Locale? = nil, timeZone: TimeZone? = nil) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM yyyy"
-        dateFormatter.locale = locale ?? PowerBag.shared.userDefinedLocale.value
+        dateFormatter.locale = locale ?? PowerBag.shared.locale.value
+        dateFormatter.timeZone = timeZone ?? PowerBag.shared.timeZone.value
         let converted = dateFormatter.string(from: self)
 
         return converted.capitalized
