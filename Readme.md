@@ -1,6 +1,6 @@
 # Power 💪 [![Release Version](https://img.shields.io/github/release/sebastianvarela/Power.svg)](https://github.com/sebastianvarela/Power/releases) [![Release Date](https://img.shields.io/github/release-date/sebastianvarela/Power.svg)](https://github.com/sebastianvarela/Power/releases) [![Swift](https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat)](https://developer.apple.com/swift) [![Build Status](https://travis-ci.org/sebastianvarela/Power.svg?branch=master)](https://travis-ci.org/sebastianvarela/Power)
 
-Welcome to my set of extensions, helpers and utilities for Swift projects. I use [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveSwift) and [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift) 🤓.
+Welcome to my set of extensions, helpers and utilities for Swift projects. I use [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) and [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift) 🤓.
 
 Feel free to watch, copy, contribute or use this framework.
 
