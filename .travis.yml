@@ -1,4 +1,6 @@
 language: objective-c
 script:
-   - carthage bootstrap --platform iOS --configuration Debug --no-use-binaries --cache-builds
-   - fastlane scan
+   - carthage bootstrap --configuration Debug --no-use-binaries --cache-builds
+   - fastlane scan --scheme Power-iOS
+   - fastlane scan --scheme Power-macOS
+   - fastlane scan --scheme Power-tvOS
