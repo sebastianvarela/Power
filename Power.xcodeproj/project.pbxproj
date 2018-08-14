@@ -166,6 +166,19 @@
 		E2FE5A372122DCCF00A38D7A /* ReactiveMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FE59DE2122CDE000A38D7A /* ReactiveMapKit.framework */; };
 		E2FE5A382122DCCF00A38D7A /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FE59E02122CDE000A38D7A /* ReactiveSwift.framework */; };
 		E2FE5A392122DCCF00A38D7A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FE59DF2122CDE000A38D7A /* Result.framework */; };
+		E2FE5A3A2122DE0D00A38D7A /* SignalProducerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8C12121A6C600C5C41C /* SignalProducerExtensions.swift */; };
+		E2FE5A3B2122DE0D00A38D7A /* SignalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8C32121A78800C5C41C /* SignalExtensions.swift */; };
+		E2FE5A3C2122DE0D00A38D7A /* ActionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8C52121A7D900C5C41C /* ActionExtensions.swift */; };
+		E2FE5A3D2122DE0E00A38D7A /* SignalProducerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8C12121A6C600C5C41C /* SignalProducerExtensions.swift */; };
+		E2FE5A3E2122DE0E00A38D7A /* SignalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8C32121A78800C5C41C /* SignalExtensions.swift */; };
+		E2FE5A3F2122DE0E00A38D7A /* ActionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8C52121A7D900C5C41C /* ActionExtensions.swift */; };
+		E2FE5A402122DE1000A38D7A /* SignalProducerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8C12121A6C600C5C41C /* SignalProducerExtensions.swift */; };
+		E2FE5A412122DE1000A38D7A /* SignalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8C32121A78800C5C41C /* SignalExtensions.swift */; };
+		E2FE5A422122DE1000A38D7A /* ActionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8C52121A7D900C5C41C /* ActionExtensions.swift */; };
+		E2FE5A432122DE3100A38D7A /* SignalProducerExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260544A21218B8B00D013B5 /* SignalProducerExtensionsTests.swift */; };
+		E2FE5A442122DE3100A38D7A /* SignalExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8C92121A8A700C5C41C /* SignalExtensionsTests.swift */; };
+		E2FE5A452122DE3200A38D7A /* SignalProducerExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260544A21218B8B00D013B5 /* SignalProducerExtensionsTests.swift */; };
+		E2FE5A462122DE3200A38D7A /* SignalExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8C92121A8A700C5C41C /* SignalExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -975,10 +988,12 @@
 				E28123F52122C3DD00E4F6D0 /* DateExtensions.swift in Sources */,
 				E28123FA2122C3DD00E4F6D0 /* OptionalExtensions.swift in Sources */,
 				E28123F62122C3DD00E4F6D0 /* DecimalExtensions.swift in Sources */,
+				E2FE5A3B2122DE0D00A38D7A /* SignalExtensions.swift in Sources */,
 				E281242C2122CBC200E4F6D0 /* PowerBag.swift in Sources */,
 				E28123F32122C3DD00E4F6D0 /* CollectionExtensions.swift in Sources */,
 				E28123EF2122C3DD00E4F6D0 /* ArrayExtensions.swift in Sources */,
 				E28123F22122C3DD00E4F6D0 /* CharacterExtensions.swift in Sources */,
+				E2FE5A3A2122DE0D00A38D7A /* SignalProducerExtensions.swift in Sources */,
 				E28123F82122C3DD00E4F6D0 /* IntExtensions.swift in Sources */,
 				E28124072122C41800E4F6D0 /* Logger.swift in Sources */,
 				E28123FD2122C3DD00E4F6D0 /* URLExtensions.swift in Sources */,
@@ -989,6 +1004,7 @@
 				E28123F72122C3DD00E4F6D0 /* FormatterExtensions.swift in Sources */,
 				E28123FC2122C3DD00E4F6D0 /* TimeIntervalExtensions.swift in Sources */,
 				E2FE59EE2122CE4100A38D7A /* StringExtensions.swift in Sources */,
+				E2FE5A3C2122DE0D00A38D7A /* ActionExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -997,10 +1013,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E28124032122C3FF00E4F6D0 /* StringExtensionsTests.swift in Sources */,
+				E2FE5A432122DE3100A38D7A /* SignalProducerExtensionsTests.swift in Sources */,
 				E28124052122C3FF00E4F6D0 /* URLExtensionsTests.swift in Sources */,
 				E28123FE2122C3FF00E4F6D0 /* ArrayExtensionsTests.swift in Sources */,
 				E28124012122C3FF00E4F6D0 /* IntExtensionsTests.swift in Sources */,
 				E28124002122C3FF00E4F6D0 /* DecimalExtensionsTests.swift in Sources */,
+				E2FE5A442122DE3100A38D7A /* SignalExtensionsTests.swift in Sources */,
 				E28124042122C3FF00E4F6D0 /* TimeIntervalExtensionsTests.swift in Sources */,
 				E28124062122C40D00E4F6D0 /* ValueContainer.swift in Sources */,
 				E28124022122C3FF00E4F6D0 /* OptionalExtensionsTests.swift in Sources */,
@@ -1015,10 +1033,12 @@
 				E2FE5A0D2122CE4E00A38D7A /* PowerBag.swift in Sources */,
 				E2FE59F92122CE4800A38D7A /* FormatterExtensions.swift in Sources */,
 				E2FE59FC2122CE4800A38D7A /* OptionalExtensions.swift in Sources */,
+				E2FE5A3E2122DE0E00A38D7A /* SignalExtensions.swift in Sources */,
 				E2FE59F22122CE4800A38D7A /* BoolExtensions.swift in Sources */,
 				E2FE59F52122CE4800A38D7A /* CollectionExtensions.swift in Sources */,
 				E2FE59F82122CE4800A38D7A /* DecimalExtensions.swift in Sources */,
 				E2FE59FA2122CE4800A38D7A /* IntExtensions.swift in Sources */,
+				E2FE5A3D2122DE0E00A38D7A /* SignalProducerExtensions.swift in Sources */,
 				E2FE59F42122CE4800A38D7A /* CharacterExtensions.swift in Sources */,
 				E2FE5A0F2122CE5400A38D7A /* Logger.swift in Sources */,
 				E2FE59FE2122CE4800A38D7A /* URLExtensions.swift in Sources */,
@@ -1029,6 +1049,7 @@
 				E2FE59F12122CE4800A38D7A /* ArrayExtensions.swift in Sources */,
 				E2FE59F32122CE4800A38D7A /* BundleExtensions.swift in Sources */,
 				E2FE59FD2122CE4800A38D7A /* TimeIntervalExtensions.swift in Sources */,
+				E2FE5A3F2122DE0E00A38D7A /* ActionExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1037,10 +1058,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2FE5A162122CE6200A38D7A /* StringExtensionsTests.swift in Sources */,
+				E2FE5A452122DE3200A38D7A /* SignalProducerExtensionsTests.swift in Sources */,
 				E2FE5A182122CE6200A38D7A /* URLExtensionsTests.swift in Sources */,
 				E2FE5A112122CE6100A38D7A /* ArrayExtensionsTests.swift in Sources */,
 				E2FE5A142122CE6200A38D7A /* IntExtensionsTests.swift in Sources */,
 				E2FE5A132122CE6200A38D7A /* DecimalExtensionsTests.swift in Sources */,
+				E2FE5A462122DE3200A38D7A /* SignalExtensionsTests.swift in Sources */,
 				E2FE5A172122CE6200A38D7A /* TimeIntervalExtensionsTests.swift in Sources */,
 				E2FE5A1D2122D0AE00A38D7A /* ValueContainer.swift in Sources */,
 				E2FE5A152122CE6200A38D7A /* OptionalExtensionsTests.swift in Sources */,
@@ -1055,10 +1078,12 @@
 				E2FE5A0E2122CE4F00A38D7A /* PowerBag.swift in Sources */,
 				E2FE5A072122CE4900A38D7A /* FormatterExtensions.swift in Sources */,
 				E2FE5A0A2122CE4900A38D7A /* OptionalExtensions.swift in Sources */,
+				E2FE5A412122DE1000A38D7A /* SignalExtensions.swift in Sources */,
 				E2FE5A002122CE4900A38D7A /* BoolExtensions.swift in Sources */,
 				E2FE5A032122CE4900A38D7A /* CollectionExtensions.swift in Sources */,
 				E2FE5A062122CE4900A38D7A /* DecimalExtensions.swift in Sources */,
 				E2FE5A082122CE4900A38D7A /* IntExtensions.swift in Sources */,
+				E2FE5A402122DE1000A38D7A /* SignalProducerExtensions.swift in Sources */,
 				E2FE5A022122CE4900A38D7A /* CharacterExtensions.swift in Sources */,
 				E2FE5A102122CE5500A38D7A /* Logger.swift in Sources */,
 				E2FE5A0C2122CE4900A38D7A /* URLExtensions.swift in Sources */,
@@ -1069,6 +1094,7 @@
 				E2FE59FF2122CE4900A38D7A /* ArrayExtensions.swift in Sources */,
 				E2FE5A012122CE4900A38D7A /* BundleExtensions.swift in Sources */,
 				E2FE5A0B2122CE4900A38D7A /* TimeIntervalExtensions.swift in Sources */,
+				E2FE5A422122DE1000A38D7A /* ActionExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
