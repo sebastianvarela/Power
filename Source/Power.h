@@ -6,7 +6,7 @@
 //  Copyright © 2018 S3BA. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Power.
 FOUNDATION_EXPORT double PowerVersionNumber;

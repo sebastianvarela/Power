@@ -48,12 +48,6 @@ public class StringExtensionsTests: XCTestCase {
         XCTAssertEqual(message.base64Decoded, nil)
     }
     
-    public func testHtmlConversion() {
-        let message = "<b>Soy Nuñez</b>"
-        
-        XCTAssertEqual(message.htmlAttributedString?.string, "Soy Nuñez")
-    }
-    
     public func testStringToDataConvertion() {
         let message = "Pablito clavó un clavito"
         

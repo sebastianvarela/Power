@@ -62,21 +62,6 @@ public extension String {
         return self
     }
     
-    public var htmlAttributedString: NSAttributedString? {
-        guard let data = self.data(using: .utf8) else {
-            return nil
-        }
-        do {
-            let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
-                NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html,
-                NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue
-            ]
-            return try NSAttributedString(data: data, options: options, documentAttributes: nil)
-        } catch {
-            return nil
-        }
-    }
-    
     public var replacedPercentEncodingFromLatinToUTF8: String {
         let table = ["%E1": "%C3%A1",
                      "%E9": "%C3%A9",
