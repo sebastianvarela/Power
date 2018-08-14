@@ -1,7 +1,7 @@
 @testable import Power
 import XCTest
 
-public class StringExtensionsTests: XCTestCase {
+public class StringUIExtensionsTests: XCTestCase {
     public func testHtmlConversion() {
         let message = "<b>Soy Nuñez</b>"
         
