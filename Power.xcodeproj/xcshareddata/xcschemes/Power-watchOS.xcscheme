@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E281244D2122CC5B00E4F6D0"
-               BuildableName = "Power_watchOS.framework"
+               BuildableName = "Power.framework"
                BlueprintName = "Power-watchOS"
                ReferencedContainer = "container:Power.xcodeproj">
             </BuildableReference>
@@ -47,7 +47,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E281244D2122CC5B00E4F6D0"
-            BuildableName = "Power_watchOS.framework"
+            BuildableName = "Power.framework"
             BlueprintName = "Power-watchOS"
             ReferencedContainer = "container:Power.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E281244D2122CC5B00E4F6D0"
-            BuildableName = "Power_watchOS.framework"
+            BuildableName = "Power.framework"
             BlueprintName = "Power-watchOS"
             ReferencedContainer = "container:Power.xcodeproj">
          </BuildableReference>
