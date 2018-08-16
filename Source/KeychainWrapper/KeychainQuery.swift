@@ -65,18 +65,24 @@ internal class KeychainQuery {
     internal var load: Data? {
         let dataTypeRef = UnsafeMutablePointer<AnyObject?>.allocate(capacity: 1)
         let status = SecItemCopyMatching(self.dictionary, dataTypeRef)
-        if #available(iOS 11.3, *), status != noErr, let errorDescription = SecCopyErrorMessageString(status, nil) {
-            logWarning("Error on loading data on keychain: \(String(errorDescription))")
-        }
-        guard status == noErr, let data = dataTypeRef.pointee as? Data else {
+        if status == noErr, let data = dataTypeRef.pointee as? Data {
+            return data
+        } else if status == errSecItemNotFound {
             return nil
         }
         
-        return data
+        if #available(iOS 11.3, *), status != noErr, let errorDescription = SecCopyErrorMessageString(status, nil) {
+            logWarning("Error on loading data on keychain: \(String(errorDescription))")
+        }
+        
+        return nil
     }
     
     internal var delete: Bool {
         let status = SecItemDelete(self.dictionary)
+        if status == errSecItemNotFound {
+            return false
+        }
         if #available(iOS 11.3, *), status != noErr, let errorDescription = SecCopyErrorMessageString(status, nil) {
             logWarning("Error on deleting data on keychain: \(String(errorDescription))")
         }
