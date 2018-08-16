@@ -179,6 +179,10 @@
 		E2FE5A482122FB9600A38D7A /* LocaleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A472122FB9600A38D7A /* LocaleExtensionsTests.swift */; };
 		E2FE5A492122FB9600A38D7A /* LocaleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A472122FB9600A38D7A /* LocaleExtensionsTests.swift */; };
 		E2FE5A4A2122FB9600A38D7A /* LocaleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A472122FB9600A38D7A /* LocaleExtensionsTests.swift */; };
+		E2FE5A4C21256C2500A38D7A /* ConstantKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A4B21256C2500A38D7A /* ConstantKey.swift */; };
+		E2FE5A4D21256C4D00A38D7A /* ConstantKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A4B21256C2500A38D7A /* ConstantKey.swift */; };
+		E2FE5A4E21256C4E00A38D7A /* ConstantKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A4B21256C2500A38D7A /* ConstantKey.swift */; };
+		E2FE5A4F21256C4F00A38D7A /* ConstantKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A4B21256C2500A38D7A /* ConstantKey.swift */; };
 		E2FE5A5021256C8300A38D7A /* UniqueValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23E36FB2121925800A81C2A /* UniqueValue.swift */; };
 		E2FE5A5121256C8300A38D7A /* UniqueValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23E36FB2121925800A81C2A /* UniqueValue.swift */; };
 		E2FE5A5221256C8300A38D7A /* UniqueValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23E36FB2121925800A81C2A /* UniqueValue.swift */; };
@@ -186,6 +190,9 @@
 		E2FE5A5521256D0E00A38D7A /* UniqueValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A5421256D0E00A38D7A /* UniqueValueTests.swift */; };
 		E2FE5A5621256D0E00A38D7A /* UniqueValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A5421256D0E00A38D7A /* UniqueValueTests.swift */; };
 		E2FE5A5721256D0E00A38D7A /* UniqueValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A5421256D0E00A38D7A /* UniqueValueTests.swift */; };
+		E2FE5A5921256D1B00A38D7A /* ConstantKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A5821256D1B00A38D7A /* ConstantKeyTests.swift */; };
+		E2FE5A5A21256D1B00A38D7A /* ConstantKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A5821256D1B00A38D7A /* ConstantKeyTests.swift */; };
+		E2FE5A5B21256D1B00A38D7A /* ConstantKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A5821256D1B00A38D7A /* ConstantKeyTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -295,7 +302,9 @@
 		E2FE5A192122CFBA00A38D7A /* StringUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUIExtensions.swift; sourceTree = "<group>"; };
 		E2FE5A1B2122D01A00A38D7A /* StringUIExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUIExtensionsTests.swift; sourceTree = "<group>"; };
 		E2FE5A472122FB9600A38D7A /* LocaleExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleExtensionsTests.swift; sourceTree = "<group>"; };
+		E2FE5A4B21256C2500A38D7A /* ConstantKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantKey.swift; sourceTree = "<group>"; };
 		E2FE5A5421256D0E00A38D7A /* UniqueValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueValueTests.swift; sourceTree = "<group>"; };
+		E2FE5A5821256D1B00A38D7A /* ConstantKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantKeyTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				E2FE5A5421256D0E00A38D7A /* UniqueValueTests.swift */,
+				E2FE5A5821256D1B00A38D7A /* ConstantKeyTests.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -403,6 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				E23E36FB2121925800A81C2A /* UniqueValue.swift */,
+				E2FE5A4B21256C2500A38D7A /* ConstantKey.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -973,6 +984,7 @@
 				E260544221218B7600D013B5 /* BoolExtensions.swift in Sources */,
 				E260542C21218B7600D013B5 /* UIBarButtonItemExtensions.swift in Sources */,
 				E260543A21218B7600D013B5 /* StringExtensions.swift in Sources */,
+				E2FE5A4C21256C2500A38D7A /* ConstantKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -987,6 +999,7 @@
 				E2FE5A1C2122D01A00A38D7A /* StringUIExtensionsTests.swift in Sources */,
 				E260545921218B8C00D013B5 /* IntExtensionsTests.swift in Sources */,
 				E260545821218B8C00D013B5 /* SignalProducerExtensionsTests.swift in Sources */,
+				E2FE5A5921256D1B00A38D7A /* ConstantKeyTests.swift in Sources */,
 				E260545321218B8C00D013B5 /* DecimalExtensionsTests.swift in Sources */,
 				E260545421218B8C00D013B5 /* DateExtensionsTests.swift in Sources */,
 				E2FE5A5521256D0E00A38D7A /* UniqueValueTests.swift in Sources */,
@@ -1021,6 +1034,7 @@
 				E28123FD2122C3DD00E4F6D0 /* URLExtensions.swift in Sources */,
 				E28123F02122C3DD00E4F6D0 /* BoolExtensions.swift in Sources */,
 				E28123F92122C3DD00E4F6D0 /* LocaleExtensions.swift in Sources */,
+				E2FE5A4D21256C4D00A38D7A /* ConstantKey.swift in Sources */,
 				E28123F12122C3DD00E4F6D0 /* BundleExtensions.swift in Sources */,
 				E28123F42122C3DD00E4F6D0 /* DataExtensions.swift in Sources */,
 				E28123F72122C3DD00E4F6D0 /* FormatterExtensions.swift in Sources */,
@@ -1036,6 +1050,7 @@
 			files = (
 				E28124032122C3FF00E4F6D0 /* StringExtensionsTests.swift in Sources */,
 				E2FE5A492122FB9600A38D7A /* LocaleExtensionsTests.swift in Sources */,
+				E2FE5A5A21256D1B00A38D7A /* ConstantKeyTests.swift in Sources */,
 				E2FE5A432122DE3100A38D7A /* SignalProducerExtensionsTests.swift in Sources */,
 				E28124052122C3FF00E4F6D0 /* URLExtensionsTests.swift in Sources */,
 				E28123FE2122C3FF00E4F6D0 /* ArrayExtensionsTests.swift in Sources */,
@@ -1068,6 +1083,7 @@
 				E2FE59FE2122CE4800A38D7A /* URLExtensions.swift in Sources */,
 				E2FE59EF2122CE4200A38D7A /* StringExtensions.swift in Sources */,
 				E2FE59F62122CE4800A38D7A /* DataExtensions.swift in Sources */,
+				E2FE5A4E21256C4E00A38D7A /* ConstantKey.swift in Sources */,
 				E2FE59F72122CE4800A38D7A /* DateExtensions.swift in Sources */,
 				E2FE59FB2122CE4800A38D7A /* LocaleExtensions.swift in Sources */,
 				E2FE59F12122CE4800A38D7A /* ArrayExtensions.swift in Sources */,
@@ -1083,6 +1099,7 @@
 			files = (
 				E2FE5A162122CE6200A38D7A /* StringExtensionsTests.swift in Sources */,
 				E2FE5A4A2122FB9600A38D7A /* LocaleExtensionsTests.swift in Sources */,
+				E2FE5A5B21256D1B00A38D7A /* ConstantKeyTests.swift in Sources */,
 				E2FE5A452122DE3200A38D7A /* SignalProducerExtensionsTests.swift in Sources */,
 				E2FE5A182122CE6200A38D7A /* URLExtensionsTests.swift in Sources */,
 				E2FE5A112122CE6100A38D7A /* ArrayExtensionsTests.swift in Sources */,
@@ -1115,6 +1132,7 @@
 				E2FE5A0C2122CE4900A38D7A /* URLExtensions.swift in Sources */,
 				E2FE59F02122CE4300A38D7A /* StringExtensions.swift in Sources */,
 				E2FE5A042122CE4900A38D7A /* DataExtensions.swift in Sources */,
+				E2FE5A4F21256C4F00A38D7A /* ConstantKey.swift in Sources */,
 				E2FE5A052122CE4900A38D7A /* DateExtensions.swift in Sources */,
 				E2FE5A092122CE4900A38D7A /* LocaleExtensions.swift in Sources */,
 				E2FE59FF2122CE4900A38D7A /* ArrayExtensions.swift in Sources */,
