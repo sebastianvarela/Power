@@ -91,9 +91,9 @@ public class ArrayExtensionsTests: XCTestCase {
     }
 
     public func testUpsertWhenTheObjectExists() {
-        var array = [ValueContainer(id: 1, value: "hola")]
+        var array = [UniqueValue(id: 1, value: "hola")]
         
-        array.upsert(ValueContainer(id: 1, value: "holita"))
+        array.upsert(UniqueValue(id: 1, value: "holita"))
         
         XCTAssertEqual(array.count, 1)
         XCTAssertEqual(array.first?.id, 1)
