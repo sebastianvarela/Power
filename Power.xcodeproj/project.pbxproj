@@ -193,6 +193,15 @@
 		E2FE5A5921256D1B00A38D7A /* ConstantKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A5821256D1B00A38D7A /* ConstantKeyTests.swift */; };
 		E2FE5A5A21256D1B00A38D7A /* ConstantKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A5821256D1B00A38D7A /* ConstantKeyTests.swift */; };
 		E2FE5A5B21256D1B00A38D7A /* ConstantKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A5821256D1B00A38D7A /* ConstantKeyTests.swift */; };
+		E2FE5A632125958500A38D7A /* KeychainQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A622125958500A38D7A /* KeychainQuery.swift */; };
+		E2FE5A642125958500A38D7A /* KeychainQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A622125958500A38D7A /* KeychainQuery.swift */; };
+		E2FE5A652125958500A38D7A /* KeychainQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A622125958500A38D7A /* KeychainQuery.swift */; };
+		E2FE5A662125958500A38D7A /* KeychainQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A622125958500A38D7A /* KeychainQuery.swift */; };
+		E2FE5A67212595B800A38D7A /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A5E2125956100A38D7A /* KeychainWrapper.swift */; };
+		E2FE5A68212595B900A38D7A /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A5E2125956100A38D7A /* KeychainWrapper.swift */; };
+		E2FE5A69212595BA00A38D7A /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A5E2125956100A38D7A /* KeychainWrapper.swift */; };
+		E2FE5A6A212595BD00A38D7A /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A5E2125956100A38D7A /* KeychainWrapper.swift */; };
+		E2FE5A6E2125968000A38D7A /* KeychainWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE5A6C2125968000A38D7A /* KeychainWrapperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -305,6 +314,9 @@
 		E2FE5A4B21256C2500A38D7A /* ConstantKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantKey.swift; sourceTree = "<group>"; };
 		E2FE5A5421256D0E00A38D7A /* UniqueValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueValueTests.swift; sourceTree = "<group>"; };
 		E2FE5A5821256D1B00A38D7A /* ConstantKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantKeyTests.swift; sourceTree = "<group>"; };
+		E2FE5A5E2125956100A38D7A /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		E2FE5A622125958500A38D7A /* KeychainQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainQuery.swift; sourceTree = "<group>"; };
+		E2FE5A6C2125968000A38D7A /* KeychainWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -446,6 +458,7 @@
 			isa = PBXGroup;
 			children = (
 				E2FE5A5C21257EAA00A38D7A /* Configuration */,
+				E2FE5A5D2125954400A38D7A /* KeychainWrapper */,
 				E28123B32121CE2900E4F6D0 /* Logger */,
 				E23E37062121962200A81C2A /* Common */,
 				E260540921218B5F00D013B5 /* Extensions */,
@@ -458,6 +471,7 @@
 		E26053FB2121880000D013B5 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				E2FE5A6B2125963700A38D7A /* KeychainWrapper */,
 				E23E36FA2121924C00A81C2A /* Common */,
 				E260540A21218B6500D013B5 /* Extensions */,
 				E23E37012121936000A81C2A /* Resources */,
@@ -648,6 +662,23 @@
 				E23E37072121986000A81C2A /* PowerBag.swift */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		E2FE5A5D2125954400A38D7A /* KeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				E2FE5A5E2125956100A38D7A /* KeychainWrapper.swift */,
+				E2FE5A622125958500A38D7A /* KeychainQuery.swift */,
+			);
+			path = KeychainWrapper;
+			sourceTree = "<group>";
+		};
+		E2FE5A6B2125963700A38D7A /* KeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				E2FE5A6C2125968000A38D7A /* KeychainWrapperTests.swift */,
+			);
+			path = KeychainWrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -948,6 +979,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2FE5A632125958500A38D7A /* KeychainQuery.swift in Sources */,
 				E2ACA8B82121A47500C5C41C /* ReactiveCocoaExtensions.swift in Sources */,
 				E2FE5A1A2122CFBA00A38D7A /* StringUIExtensions.swift in Sources */,
 				E260542821218B7600D013B5 /* DataExtensions.swift in Sources */,
@@ -971,6 +1003,7 @@
 				E260542A21218B7600D013B5 /* ArrayExtensions.swift in Sources */,
 				E260544121218B7600D013B5 /* UIColorExtensions.swift in Sources */,
 				E2ACA8C62121A7D900C5C41C /* ActionExtensions.swift in Sources */,
+				E2FE5A67212595B800A38D7A /* KeychainWrapper.swift in Sources */,
 				E260543C21218B7600D013B5 /* UIViewControllerExtensions.swift in Sources */,
 				E23E36F72121901800A81C2A /* LocaleExtensions.swift in Sources */,
 				E260543821218B7600D013B5 /* DecimalExtensions.swift in Sources */,
@@ -1021,6 +1054,7 @@
 			files = (
 				E28123F52122C3DD00E4F6D0 /* DateExtensions.swift in Sources */,
 				E28123FA2122C3DD00E4F6D0 /* OptionalExtensions.swift in Sources */,
+				E2FE5A642125958500A38D7A /* KeychainQuery.swift in Sources */,
 				E28123F62122C3DD00E4F6D0 /* DecimalExtensions.swift in Sources */,
 				E2FE5A5121256C8300A38D7A /* UniqueValue.swift in Sources */,
 				E2FE5A3B2122DE0D00A38D7A /* SignalExtensions.swift in Sources */,
@@ -1039,6 +1073,7 @@
 				E28123F42122C3DD00E4F6D0 /* DataExtensions.swift in Sources */,
 				E28123F72122C3DD00E4F6D0 /* FormatterExtensions.swift in Sources */,
 				E28123FC2122C3DD00E4F6D0 /* TimeIntervalExtensions.swift in Sources */,
+				E2FE5A68212595B900A38D7A /* KeychainWrapper.swift in Sources */,
 				E2FE59EE2122CE4100A38D7A /* StringExtensions.swift in Sources */,
 				E2FE5A3C2122DE0D00A38D7A /* ActionExtensions.swift in Sources */,
 			);
@@ -1061,6 +1096,7 @@
 				E28124022122C3FF00E4F6D0 /* OptionalExtensionsTests.swift in Sources */,
 				E28123FF2122C3FF00E4F6D0 /* DateExtensionsTests.swift in Sources */,
 				E2FE5A5621256D0E00A38D7A /* UniqueValueTests.swift in Sources */,
+				E2FE5A6E2125968000A38D7A /* KeychainWrapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1070,6 +1106,7 @@
 			files = (
 				E2FE5A0D2122CE4E00A38D7A /* PowerBag.swift in Sources */,
 				E2FE59F92122CE4800A38D7A /* FormatterExtensions.swift in Sources */,
+				E2FE5A652125958500A38D7A /* KeychainQuery.swift in Sources */,
 				E2FE59FC2122CE4800A38D7A /* OptionalExtensions.swift in Sources */,
 				E2FE5A5321256C8300A38D7A /* UniqueValue.swift in Sources */,
 				E2FE5A3E2122DE0E00A38D7A /* SignalExtensions.swift in Sources */,
@@ -1088,6 +1125,7 @@
 				E2FE59FB2122CE4800A38D7A /* LocaleExtensions.swift in Sources */,
 				E2FE59F12122CE4800A38D7A /* ArrayExtensions.swift in Sources */,
 				E2FE59F32122CE4800A38D7A /* BundleExtensions.swift in Sources */,
+				E2FE5A69212595BA00A38D7A /* KeychainWrapper.swift in Sources */,
 				E2FE59FD2122CE4800A38D7A /* TimeIntervalExtensions.swift in Sources */,
 				E2FE5A3F2122DE0E00A38D7A /* ActionExtensions.swift in Sources */,
 			);
@@ -1119,6 +1157,7 @@
 			files = (
 				E2FE5A0E2122CE4F00A38D7A /* PowerBag.swift in Sources */,
 				E2FE5A072122CE4900A38D7A /* FormatterExtensions.swift in Sources */,
+				E2FE5A662125958500A38D7A /* KeychainQuery.swift in Sources */,
 				E2FE5A0A2122CE4900A38D7A /* OptionalExtensions.swift in Sources */,
 				E2FE5A5021256C8300A38D7A /* UniqueValue.swift in Sources */,
 				E2FE5A412122DE1000A38D7A /* SignalExtensions.swift in Sources */,
@@ -1137,6 +1176,7 @@
 				E2FE5A092122CE4900A38D7A /* LocaleExtensions.swift in Sources */,
 				E2FE59FF2122CE4900A38D7A /* ArrayExtensions.swift in Sources */,
 				E2FE5A012122CE4900A38D7A /* BundleExtensions.swift in Sources */,
+				E2FE5A6A212595BD00A38D7A /* KeychainWrapper.swift in Sources */,
 				E2FE5A0B2122CE4900A38D7A /* TimeIntervalExtensions.swift in Sources */,
 				E2FE5A422122DE1000A38D7A /* ActionExtensions.swift in Sources */,
 			);
@@ -1308,7 +1348,7 @@
 					"@loader_path/Frameworks",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.s3ba.net.Power;
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.Power;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1340,7 +1380,7 @@
 					"@loader_path/Frameworks",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.s3ba.net.Power;
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.Power;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1365,7 +1405,7 @@
 					"@loader_path/Frameworks",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.s3ba.net.PowerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.PowerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1389,7 +1429,7 @@
 					"@loader_path/Frameworks",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.s3ba.net.PowerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.PowerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1420,7 +1460,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.s3ba.net.Power;
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.Power;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1451,7 +1491,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.s3ba.net.Power;
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.Power;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1477,7 +1517,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.s3ba.net.Power-macOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.PowerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
@@ -1503,7 +1543,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.s3ba.net.Power-macOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.PowerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
@@ -1531,7 +1571,7 @@
 					"@loader_path/Frameworks",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.s3ba.net.Power-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.Power;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1561,7 +1601,7 @@
 					"@loader_path/Frameworks",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.s3ba.net.Power-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.Power;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1586,7 +1626,7 @@
 					"@loader_path/Frameworks",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.s3ba.net.Power-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.PowerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
@@ -1611,7 +1651,7 @@
 					"@loader_path/Frameworks",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.s3ba.net.Power-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.PowerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
@@ -1642,7 +1682,7 @@
 					"@loader_path/Frameworks",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.s3ba.net.Power-watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.Power;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1673,7 +1713,7 @@
 					"@loader_path/Frameworks",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.s3ba.net.Power-watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.Power;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
