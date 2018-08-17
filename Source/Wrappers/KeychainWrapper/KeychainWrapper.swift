@@ -15,6 +15,10 @@ public protocol KeychainWrapper {
 }
 
 public class DefaultKeychainWrapper: KeychainWrapper {
+    public init() {
+        
+    }
+    
     public func read(stringFromService service: ConstantKey, andAccount account: ConstantKey) -> String? {
         return KeychainQuery(service: service.rawValue, account: account.rawValue).load?.stringUTF8
     }
