@@ -40,4 +40,3 @@ public class ConstantKeyTests: XCTestCase {
         XCTAssertEqual(value1 + value2, value3)
     }
 }
-

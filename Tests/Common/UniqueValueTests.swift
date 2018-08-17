@@ -31,4 +31,3 @@ public class UniqueValueTests: XCTestCase {
         XCTAssertNil([value1, value2, value3].find(byId: 4))
     }
 }
-
