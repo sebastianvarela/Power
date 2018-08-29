@@ -28,6 +28,30 @@ public class SignalExtensionsTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
     
+    public func testOnErrorReceivedWhenObserverSendAValue() {
+        let expect = expectation(description: "checking error async")
+        let (signal, observer) = Signal<Int, NSError>.pipe()
+        
+        signal.onErrorReceived {
+            expect.fulfill()
+        }
+        observer.send(error: NSError(domain: "error", code: 123, userInfo: nil))
+        
+        waitForExpectations(timeout: 1)
+    }
+    
+    public func testOnErrorReceivedWhenObserverDoesNotSendNothing() {
+        let expect = expectation(description: "checking no error async")
+        expect.isInverted = true
+        let (signal, _) = Signal<Int, NSError>.pipe()
+        
+        signal.onErrorReceived {
+            expect.fulfill()
+        }
+        
+        waitForExpectations(timeout: 1)
+    }
+    
     public func testDemoteError() {
         let expect = expectation(description: "checking value async")
         let (signal, observer) = Signal<Int, NSError>.pipe()

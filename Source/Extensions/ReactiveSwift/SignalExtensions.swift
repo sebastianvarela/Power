@@ -24,6 +24,15 @@ public extension Signal {
             }
         }
     }
+    
+    @discardableResult
+    public func onErrorReceived(_ action: @escaping (()) -> Void) -> Disposable? {
+        return mapToVoid().observeResult { result in
+            if case .failure = result {
+                action(())
+            }
+        }
+    }
 }
 
 public extension Signal where Error == NoError {
