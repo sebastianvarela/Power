@@ -5,7 +5,7 @@ import XCTest
 
 public class SignalExtensionsTests: XCTestCase {
     public func testOnValueReceivedWhenObserverSendAValue() {
-        let expect = expectation(description: "Closure for code filled completed")
+        let expect = expectation(description: "checking value async")
         let (signal, observer) = Signal<Int, NoError>.pipe()
         
         signal.onValueReceived {
@@ -17,7 +17,7 @@ public class SignalExtensionsTests: XCTestCase {
     }
     
     public func testOnValueReceivedWhenObserverDoesNotSendNothing() {
-        let expect = expectation(description: "Closure for code filled completed")
+        let expect = expectation(description: "checking no value async")
         expect.isInverted = true
         let (signal, _) = Signal<Int, NoError>.pipe()
         
