@@ -6,6 +6,16 @@ public extension Signal {
         return map { _ in return () }
     }
     
+    public func demoteError() -> Signal<Value, NoError> {
+        return Signal<Value, NoError> { observer, lifetime in
+            self.observeResult { result in
+                if case .success(let value) = result {
+                    observer.send(value: value)
+                }
+            }
+        }
+    }
+    
     @discardableResult
     public func onValueReceived(_ action: @escaping (()) -> Void) -> Disposable? {
         return mapToVoid().observeResult { result in

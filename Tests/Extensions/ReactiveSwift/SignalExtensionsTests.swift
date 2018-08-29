@@ -27,4 +27,25 @@ public class SignalExtensionsTests: XCTestCase {
         
         waitForExpectations(timeout: 1)
     }
+    
+    public func testDemoteError() {
+        let expect = expectation(description: "checking value async")
+        let (signal, observer) = Signal<Int, NSError>.pipe()
+        let value = 123
+        
+        signal.demoteError().observeResult { action in
+            switch action {
+            case .failure:
+                XCTFail("This should not be fired")
+            case .success(let val):
+                expect.fulfill()
+                XCTAssertEqual(value, val)
+            }
+        }
+
+        observer.send(value: value)
+        observer.send(error: NSError(domain: "error", code: 1234, userInfo: nil))
+        
+        waitForExpectations(timeout: 1)
+    }
 }
