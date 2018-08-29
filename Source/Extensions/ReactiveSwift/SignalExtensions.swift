@@ -45,9 +45,16 @@ public extension Signal where Error == NoError {
 
 public extension Signal.Observer {
     @discardableResult
-    public static func <~ <Source: BindingSource> (observer: Signal.Observer, source: Source) -> Disposable?
-        where Source.Value == Value {
+    public static func <~ <Source: SignalProducerConvertible> (observer: Signal.Observer, source: Source) -> Disposable?
+        where Source.Value == Value, Source.Error == Error {
             return source.producer
-                .startWithValues(observer.send)
+                .startWithResult { action in
+                    switch action {
+                    case .failure(let error):
+                        observer.send(error: error)
+                    case .success(let value):
+                        observer.send(value: value)
+                    }
+                }
     }
 }

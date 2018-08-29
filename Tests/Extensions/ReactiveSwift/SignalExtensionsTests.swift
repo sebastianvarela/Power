@@ -66,6 +66,31 @@ public class SignalExtensionsTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
 
+    public func testBindingSignalToObserverWithError() {
+        let valueExpect = expectation(description: "checking value async throught binding")
+        let errorExpect = expectation(description: "checking error async throught binding")
+        let error = NSError(domain: "error", code: 123, userInfo: nil)
+        let value = 3
+        let (signal2, observer2) = Signal<Int, NSError>.pipe()
+        let (signal1, observer1) = Signal<Int, NSError>.pipe()
+        
+        observer1 <~ signal2
+        signal1.observeResult { action in
+            switch action {
+            case .failure(let err):
+                errorExpect.fulfill()
+                XCTAssertEqual(error, err)
+            case .success(let val):
+                valueExpect.fulfill()
+                XCTAssertEqual(value, val)
+            }
+        }
+        observer2.send(value: value)
+        observer2.send(error: error)
+        
+        waitForExpectations(timeout: 1)
+    }
+    
     public func testDemoteError() {
         let expect = expectation(description: "checking value async")
         let (signal, observer) = Signal<Int, NSError>.pipe()
