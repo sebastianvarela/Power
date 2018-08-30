@@ -4,6 +4,20 @@ import Result
 import XCTest
 
 public class SignalExtensionsTests: XCTestCase {
+    public func testMapToVoid() {
+        let expect = expectation(description: "checking value async")
+        let (signal, observer) = Signal<Int, NoError>.pipe()
+        
+        signal.mapToVoid().observeValues { void in
+            XCTAssert(void == ())
+            expect.fulfill()
+        }
+        
+        observer.send(value: 4)
+        
+        waitForExpectations(timeout: 1)
+    }
+    
     public func testOnValueReceivedWhenObserverSendAValue() {
         let expect = expectation(description: "checking value async")
         let (signal, observer) = Signal<Int, NoError>.pipe()

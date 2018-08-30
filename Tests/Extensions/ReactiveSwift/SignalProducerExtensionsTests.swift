@@ -4,6 +4,55 @@ import Result
 import XCTest
 
 public class SignalProducerExtensionsTests: XCTestCase {
+    public func testOnValue() {
+        let value = "hola"
+        let expect = expectation(description: "checking value async")
+        let producer = SignalProducer<String, NoError> { observer, _ in
+            observer.send(value: value)
+            observer.sendCompleted()
+        }
+        
+        producer
+            .onValue { val in
+                XCTAssertTrue(val == value)
+                expect.fulfill()
+            }
+            .start()
+        
+        waitForExpectations(timeout: 1)
+    }
+    
+    public func testOnError() {
+        let expect = expectation(description: "checking value async")
+        let producer = SignalProducer<String, NSError> { observer, _ in
+            observer.send(error: NSError(domain: "wawa", code: 214, userInfo: nil))
+        }
+        
+        producer
+            .onFailed { err in
+                XCTAssertTrue(err.domain == "wawa")
+                expect.fulfill()
+            }
+            .start()
+        
+        waitForExpectations(timeout: 1)
+    }
+    
+    public func testMapToVoid() {
+        let expect = expectation(description: "checking value async")
+        let producer = SignalProducer<String, NoError> { observer, _ in
+            observer.send(value: "hola")
+            observer.sendCompleted()
+        }
+        
+        producer.mapToVoid().startWithValues { value in
+            XCTAssert(value == ())
+            expect.fulfill()
+        }
+        
+        waitForExpectations(timeout: 1)
+    }
+
     public func testDemoteErrorOnValueErrorInterrupted() {
         let valueToSend = "holita"
         let producer = SignalProducer<String, NSError> { observer, _ in

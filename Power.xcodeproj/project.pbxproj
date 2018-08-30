@@ -813,6 +813,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E28123EC2122C2CB00E4F6D0 /* Build configuration list for PBXNativeTarget "Power-macOS" */;
 			buildPhases = (
+				E20BA60521389BE0005BA13B /* Swiftlint */,
 				E28123D22122C2CB00E4F6D0 /* Sources */,
 				E28123D32122C2CB00E4F6D0 /* Frameworks */,
 				E28123D42122C2CB00E4F6D0 /* Headers */,
@@ -849,6 +850,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E28124432122CC4C00E4F6D0 /* Build configuration list for PBXNativeTarget "Power-tvOS" */;
 			buildPhases = (
+				E20BA60621389BF7005BA13B /* Swiftlint */,
 				E281242D2122CC4C00E4F6D0 /* Sources */,
 				E281242E2122CC4C00E4F6D0 /* Frameworks */,
 				E281242F2122CC4C00E4F6D0 /* Headers */,
@@ -1011,6 +1013,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		E20BA60521389BE0005BA13B /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, run: brew install swiftlint\"\nfi";
+		};
+		E20BA60621389BF7005BA13B /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, run: brew install swiftlint\"\nfi";
+		};
 		E260540821218AF400D013B5 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

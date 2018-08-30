@@ -18,7 +18,7 @@ public extension Signal {
     
     @discardableResult
     public func onValueReceived(_ action: @escaping (()) -> Void) -> Disposable? {
-        return mapToVoid().observeResult { result in
+        return observeResult { result in
             if case .success = result {
                 action(())
             }
@@ -27,7 +27,7 @@ public extension Signal {
     
     @discardableResult
     public func onErrorReceived(_ action: @escaping (()) -> Void) -> Disposable? {
-        return mapToVoid().observeResult { result in
+        return observeResult { result in
             if case .failure = result {
                 action(())
             }
