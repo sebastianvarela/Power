@@ -10,5 +10,5 @@ script:
 - bash <(curl -s https://codecov.io/bash) -cF tvos -J 'Power'
 - xcodebuild -project Power.xcodeproj -scheme Power-macOS -configuration Debug -enableCodeCoverage YES clean build test | xcpretty -f `xcpretty-travis-formatter`
 - bash <(curl -s https://codecov.io/bash) -cF osx -J 'Power'
-- xcodebuild -project Power.xcodeproj -scheme Power-watchOS -configuration Debug -enableCodeCoverage YES clean build | xcpretty -f `xcpretty-travis-formatter`
+- xcodebuild -project Power.xcodeproj -scheme Power-watchOS -configuration Debug clean build | xcpretty -f `xcpretty-travis-formatter`
 - swiftlint lint
