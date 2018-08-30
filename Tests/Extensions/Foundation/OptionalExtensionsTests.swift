@@ -34,7 +34,7 @@ public class OptionalExtensionsTests: XCTestCase {
         XCTAssertTrue(nothing.isNil)
     }
     
-    public func testIsNilOrEmpty() {
+    public func testIsNilOrEmptyForStringWrapped() {
         let nothing: String? = nil
         let something: String? = "hola"
         let trap: String? = ""
