@@ -7,7 +7,7 @@ public extension Signal {
     }
     
     public func demoteError() -> Signal<Value, NoError> {
-        return Signal<Value, NoError> { observer, lifetime in
+        return Signal<Value, NoError> { observer, _ in
             self.observeResult { result in
                 if case .success(let value) = result {
                     observer.send(value: value)

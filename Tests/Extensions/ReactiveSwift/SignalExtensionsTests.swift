@@ -107,7 +107,7 @@ public class SignalExtensionsTests: XCTestCase {
         }
 
         observer.send(value: value)
-        observer.send(error: NSError(domain: "error", code: 1234, userInfo: nil))
+        observer.send(error: NSError(domain: "error", code: 1_234, userInfo: nil))
         
         waitForExpectations(timeout: 1)
     }
