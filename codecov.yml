@@ -1,1 +1,10 @@
-secret:JOCv0gkqmogjT6bKFt0xsO5NxFB1sGxmpsWsc3/BKBoj08JNdcLlqV8jXP/Tbo/b7LZe1IbFtZYoYPvkQMCFQg==
+comment:
+  layout: "header, changes, diff, sunburst"
+
+coverage:
+  range: 70..100
+  round: down
+  precision: 2
+  ignore:
+  - Carthage/.*
+  - Tests/.*
