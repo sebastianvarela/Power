@@ -18,6 +18,14 @@ public class StringExtensionsTests: XCTestCase {
         XCTAssert(text.isNotEmpty)
     }
     
+    public func testValidURL() {
+        let url = "http://www.apple.com"
+        XCTAssert(url.isValidUrl())
+        
+        let url2 = "asfasf"
+        XCTAssertFalse(url2.isValidUrl())
+    }
+    
     public func testValidEmail() {
         let email = "sebastian@elmasgrande.com"
         XCTAssert(email.isValidEmail())
