@@ -46,4 +46,34 @@ public class OptionalExtensionsTests: XCTestCase {
         XCTAssertNotNil(trap)
         XCTAssertTrue(trap.isNilOrEmpty)
     }
+    
+    public func testIsFalseForBoolWrapped() {
+        let nilValue: Bool? = nil
+        let trueValue: Bool? = true
+        let falseValue: Bool? = false
+        
+        XCTAssertNil(nilValue)
+        XCTAssertFalse(nilValue.isFalse)
+
+        XCTAssertNotNil(trueValue)
+        XCTAssertFalse(trueValue.isFalse)
+
+        XCTAssertNotNil(falseValue)
+        XCTAssertTrue(falseValue.isFalse)
+    }
+    
+    public func testIsTrueForBoolWrapped() {
+        let nilValue: Bool? = nil
+        let trueValue: Bool? = true
+        let falseValue: Bool? = false
+        
+        XCTAssertNil(nilValue)
+        XCTAssertFalse(nilValue.isTrue)
+        
+        XCTAssertNotNil(trueValue)
+        XCTAssertTrue(trueValue.isTrue)
+        
+        XCTAssertNotNil(falseValue)
+        XCTAssertFalse(falseValue.isTrue)
+    }
 }

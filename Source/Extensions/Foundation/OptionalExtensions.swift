@@ -26,3 +26,19 @@ public extension Optional where Wrapped == String {
         return true
     }
 }
+
+public extension Optional where Wrapped == Bool {
+    public var isTrue: Bool {
+        if let value = self {
+            return value
+        }
+        return false
+    }
+
+    public var isFalse: Bool {
+        if let value = self {
+            return value.isFalse
+        }
+        return false
+    }
+}
