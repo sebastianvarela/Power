@@ -4,11 +4,11 @@ before_install:
 - carthage bootstrap --configuration Debug --no-use-binaries --cache-builds
 
 script:
-- xcodebuild -project Power.xcodeproj -scheme Power-iOS -destination "platform=iOS Simulator,name=iPhone 7" -configuration Debug -enableCodeCoverage YES clean build test | XCPRETTY_JSON_FILE_OUTPUT="xcodebuild-ios.json" xcpretty -f `xcpretty-json-formatter`
+- xcodebuild -project Power.xcodeproj -scheme Power-iOS -destination "platform=iOS Simulator,name=iPhone 7" -configuration Debug -enableCodeCoverage YES clean build test | xcpretty -f `xcpretty-travis-formatter`
 - bash <(curl -s https://codecov.io/bash) -cF ios -J 'Power'
-- xcodebuild -project Power.xcodeproj -scheme Power-tvOS -destination "platform=tvOS Simulator,name=Apple TV" -configuration Debug -enableCodeCoverage YES clean build test | XCPRETTY_JSON_FILE_OUTPUT="xcodebuild-tvos.json" xcpretty -f `xcpretty-json-formatter`
+- xcodebuild -project Power.xcodeproj -scheme Power-tvOS -destination "platform=tvOS Simulator,name=Apple TV" -configuration Debug -enableCodeCoverage YES clean build test | xcpretty -f `xcpretty-travis-formatter`
 - bash <(curl -s https://codecov.io/bash) -cF tvos -J 'Power'
-- xcodebuild -project Power.xcodeproj -scheme Power-macOS -configuration Debug -enableCodeCoverage YES clean build test | XCPRETTY_JSON_FILE_OUTPUT="xcodebuild-macos.json" xcpretty -f `xcpretty-json-formatter`
+- xcodebuild -project Power.xcodeproj -scheme Power-macOS -configuration Debug -enableCodeCoverage YES clean build test | xcpretty -f `xcpretty-travis-formatter`
 - bash <(curl -s https://codecov.io/bash) -cF osx -J 'Power'
-- xcodebuild -project Power.xcodeproj -scheme Power-watchOS -configuration Debug -enableCodeCoverage YES clean build | XCPRETTY_JSON_FILE_OUTPUT="xcodebuild-watchos.json" xcpretty -f `xcpretty-json-formatter`
+- xcodebuild -project Power.xcodeproj -scheme Power-watchOS -configuration Debug -enableCodeCoverage YES clean build | xcpretty -f `xcpretty-travis-formatter`
 - swiftlint lint
