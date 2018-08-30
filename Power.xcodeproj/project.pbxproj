@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E20BA5FE2138806A005BA13B /* CharacterExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA5FD2138806A005BA13B /* CharacterExtensionsTests.swift */; };
+		E20BA5FF2138806A005BA13B /* CharacterExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA5FD2138806A005BA13B /* CharacterExtensionsTests.swift */; };
+		E20BA6002138806A005BA13B /* CharacterExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA5FD2138806A005BA13B /* CharacterExtensionsTests.swift */; };
+		E20BA6022138809C005BA13B /* CollectionExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA6012138809C005BA13B /* CollectionExtensionsTests.swift */; };
+		E20BA6032138809C005BA13B /* CollectionExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA6012138809C005BA13B /* CollectionExtensionsTests.swift */; };
+		E20BA6042138809C005BA13B /* CollectionExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA6012138809C005BA13B /* CollectionExtensionsTests.swift */; };
 		E23E36F72121901800A81C2A /* LocaleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23E36F62121901800A81C2A /* LocaleExtensions.swift */; };
 		E23E36F9212191CE00A81C2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23E36F8212191CD00A81C2A /* UIKit.framework */; };
 		E23E36FD2121927700A81C2A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D55FF321218E31004C7C2F /* ReactiveCocoa.framework */; };
@@ -236,6 +242,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E20BA5FD2138806A005BA13B /* CharacterExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterExtensionsTests.swift; sourceTree = "<group>"; };
+		E20BA6012138809C005BA13B /* CollectionExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensionsTests.swift; sourceTree = "<group>"; };
 		E23E36F62121901800A81C2A /* LocaleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleExtensions.swift; sourceTree = "<group>"; };
 		E23E36F8212191CD00A81C2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E23E36FB2121925800A81C2A /* UniqueValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueValue.swift; sourceTree = "<group>"; };
@@ -668,6 +676,8 @@
 			isa = PBXGroup;
 			children = (
 				E260545021218B8C00D013B5 /* ArrayExtensionsTests.swift */,
+				E20BA5FD2138806A005BA13B /* CharacterExtensionsTests.swift */,
+				E20BA6012138809C005BA13B /* CollectionExtensionsTests.swift */,
 				E260544621218B8B00D013B5 /* DateExtensionsTests.swift */,
 				E260544521218B8B00D013B5 /* DecimalExtensionsTests.swift */,
 				E260544B21218B8B00D013B5 /* IntExtensionsTests.swift */,
@@ -1075,9 +1085,11 @@
 				E260545621218B8C00D013B5 /* URLExtensionsTests.swift in Sources */,
 				E2FE5A1C2122D01A00A38D7A /* StringUIExtensionsTests.swift in Sources */,
 				E260545921218B8C00D013B5 /* IntExtensionsTests.swift in Sources */,
+				E20BA6022138809C005BA13B /* CollectionExtensionsTests.swift in Sources */,
 				E260545821218B8C00D013B5 /* SignalProducerExtensionsTests.swift in Sources */,
 				E2FE5A5921256D1B00A38D7A /* ConstantKeyTests.swift in Sources */,
 				E260545321218B8C00D013B5 /* DecimalExtensionsTests.swift in Sources */,
+				E20BA5FE2138806A005BA13B /* CharacterExtensionsTests.swift in Sources */,
 				E260545421218B8C00D013B5 /* DateExtensionsTests.swift in Sources */,
 				E2FE5A5521256D0E00A38D7A /* UniqueValueTests.swift in Sources */,
 				E260545E21218B8C00D013B5 /* ArrayExtensionsTests.swift in Sources */,
@@ -1134,11 +1146,13 @@
 				E2FE5A5A21256D1B00A38D7A /* ConstantKeyTests.swift in Sources */,
 				E2FE5A432122DE3100A38D7A /* SignalProducerExtensionsTests.swift in Sources */,
 				E28124052122C3FF00E4F6D0 /* URLExtensionsTests.swift in Sources */,
+				E20BA5FF2138806A005BA13B /* CharacterExtensionsTests.swift in Sources */,
 				E28123FE2122C3FF00E4F6D0 /* ArrayExtensionsTests.swift in Sources */,
 				E25665352126B53A0061CCF7 /* UserDefaultsWrapperTests.swift in Sources */,
 				E28124012122C3FF00E4F6D0 /* IntExtensionsTests.swift in Sources */,
 				E28124002122C3FF00E4F6D0 /* DecimalExtensionsTests.swift in Sources */,
 				E2FE5A442122DE3100A38D7A /* SignalExtensionsTests.swift in Sources */,
+				E20BA6032138809C005BA13B /* CollectionExtensionsTests.swift in Sources */,
 				E28124042122C3FF00E4F6D0 /* TimeIntervalExtensionsTests.swift in Sources */,
 				E28124022122C3FF00E4F6D0 /* OptionalExtensionsTests.swift in Sources */,
 				E28123FF2122C3FF00E4F6D0 /* DateExtensionsTests.swift in Sources */,
@@ -1188,11 +1202,13 @@
 				E2FE5A5B21256D1B00A38D7A /* ConstantKeyTests.swift in Sources */,
 				E2FE5A452122DE3200A38D7A /* SignalProducerExtensionsTests.swift in Sources */,
 				E25665362126B53A0061CCF7 /* UserDefaultsWrapperTests.swift in Sources */,
+				E20BA6042138809C005BA13B /* CollectionExtensionsTests.swift in Sources */,
 				E2FE5A182122CE6200A38D7A /* URLExtensionsTests.swift in Sources */,
 				E2FE5A112122CE6100A38D7A /* ArrayExtensionsTests.swift in Sources */,
 				E2FE5A142122CE6200A38D7A /* IntExtensionsTests.swift in Sources */,
 				E2FE5A132122CE6200A38D7A /* DecimalExtensionsTests.swift in Sources */,
 				E2FE5A462122DE3200A38D7A /* SignalExtensionsTests.swift in Sources */,
+				E20BA6002138806A005BA13B /* CharacterExtensionsTests.swift in Sources */,
 				E2FE5A172122CE6200A38D7A /* TimeIntervalExtensionsTests.swift in Sources */,
 				E2FE5A152122CE6200A38D7A /* OptionalExtensionsTests.swift in Sources */,
 				E2FE5A122122CE6100A38D7A /* DateExtensionsTests.swift in Sources */,
