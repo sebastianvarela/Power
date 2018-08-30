@@ -4,3 +4,5 @@ script:
    - fastlane scan --scheme Power-iOS
    - fastlane scan --scheme Power-macOS
    - fastlane scan --scheme Power-tvOS
+after_success:
+   - bash <(curl -s https://codecov.io/bash)
