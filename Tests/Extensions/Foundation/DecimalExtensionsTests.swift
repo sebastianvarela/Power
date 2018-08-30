@@ -2,27 +2,33 @@
 import XCTest
 
 public class DecimalExtensionsTests: XCTestCase {
-    public func testFormattedAmountWithOneDigitsToTwo() {
-        let amount: Decimal = 124.4
+    public func testFormattedAmountWithOneDigitsToTwoInEnglishFormat() {
+        let amount: Decimal = 1_124.4
         
-        XCTAssertEqual(amount.formatted(digits: 2, currency: "€"), "124,40 €")
+        XCTAssertEqual(amount.formatted(locale: .english, digits: 2, groupingSize: 3, currency: "U$S"), "1,124.40 U$S")
+    }
+    
+    public func testFormattedAmountWithOneDigitsToTwoInSpanishFormat() {
+        let amount: Decimal = 1_124.4
+        
+        XCTAssertEqual(amount.formatted(locale: .spanish, digits: 2, groupingSize: 3, currency: "€"), "1.124,40 €")
     }
 
-    public func testFormattedAmountWithThreeDigitsToTwo() {
+    public func testFormattedAmountWithThreeDigitsToTwoInSpanishFormat() {
         let amount: Decimal = 124.447
         
-        XCTAssertEqual(amount.formatted(digits: 2, currency: "€"), "124,45 €")
+        XCTAssertEqual(amount.formatted(locale: .spanish, digits: 2, groupingSize: 3, currency: "€"), "124,45 €")
     }
 
-    public func testFormattedAmountWithNoCurrency() {
+    public func testFormattedAmountWithNoCurrencyInSpanishFormat() {
         let amount: Decimal = 124.4
         
-        XCTAssertEqual(amount.formatted(digits: 1, currency: nil), "124,4")
+        XCTAssertEqual(amount.formatted(locale: .spanish, digits: 1, groupingSize: 3), "124,4")
     }
 
-    public func testFormattedAmountWithInvalidCurrency() {
+    public func testFormattedAmountWithInvalidCurrencyInSpanishFormat() {
         let amount: Decimal = 124.4
         
-        XCTAssertEqual(amount.formatted(digits: 1, currency: " € "), "124,4 €")
+        XCTAssertEqual(amount.formatted(locale: .spanish, digits: 1, groupingSize: 3, currency: " € "), "124,4 €")
     }
 }

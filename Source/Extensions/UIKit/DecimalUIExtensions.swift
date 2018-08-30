@@ -2,15 +2,15 @@ import Foundation
 import UIKit
 
 public extension Decimal {
-    public func formatted(wholeFont: UIFont, decimalFont: UIFont, digits: Int, currency: String?) -> NSAttributedString {
-        let amount = formatted(digits: digits, currency: currency)
+    public func formatted(locale: Locale? = nil, wholeFont: UIFont, decimalFont: UIFont, digits: Int = 2, groupingSize: Int = 3, currency: String?) -> NSAttributedString {
+        let formatter = Formatter.formatterForDigits(locale: locale, digits: digits, groupingSize: groupingSize)
+        let amount = formatted(locale: locale, digits: digits, groupingSize: groupingSize, currency: currency)
         let amountAttributedString = NSMutableAttributedString(string: amount)
         let rangeWholeText = NSRange(location: 0, length: amount.count)
         amountAttributedString.setAttributes([.font: wholeFont], range: rangeWholeText)
         
-        guard let commaIndex = amount.index(of: ","),
-            let spaceIndex = amount.index(of: " ") else {
-                return amountAttributedString
+        guard let commaIndex = amount.index(of: formatter.decimalSeparator.first!), let spaceIndex = amount.index(of: " ") else {
+            return amountAttributedString
         }
         
         let decimalSubstring = amount.suffix(from: commaIndex).prefix(upTo: spaceIndex)
