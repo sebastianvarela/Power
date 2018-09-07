@@ -9,7 +9,9 @@ public extension Decimal {
         let rangeWholeText = NSRange(location: 0, length: amount.count)
         amountAttributedString.setAttributes([.font: wholeFont], range: rangeWholeText)
         
-        guard let commaIndex = amount.index(of: formatter.decimalSeparator.first!), let spaceIndex = amount.index(of: " ") else {
+        guard let decimalSeparator = formatter.decimalSeparator.first,
+              let commaIndex = amount.index(of: decimalSeparator),
+              let spaceIndex = amount.index(of: " ") else {
             return amountAttributedString
         }
         
