@@ -10,6 +10,10 @@ public extension SignalProducer {
         return on(value: action)
     }
     
+    public func onCompleted(action: (() -> Void)?) -> SignalProducer<Value, Error> {
+        return on(completed: action)
+    }
+    
     public func mapToVoid() -> SignalProducer<Void, Error> {
         return map { _ in return () }
     }

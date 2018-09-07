@@ -38,6 +38,22 @@ public class SignalProducerExtensionsTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
     
+    public func testOnCompleted() {
+        let expect = expectation(description: "checking value async")
+        let producer = SignalProducer<String, NSError> { observer, _ in
+            observer.send(value: "hi")
+            observer.sendCompleted()
+        }
+        
+        producer
+            .onCompleted {
+                expect.fulfill()
+            }
+            .start()
+        
+        waitForExpectations(timeout: 1)
+    }
+    
     public func testMapToVoid() {
         let expect = expectation(description: "checking value async")
         let producer = SignalProducer<String, NoError> { observer, _ in
