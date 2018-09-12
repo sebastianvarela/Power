@@ -60,6 +60,7 @@ public class DateExtensionsTests: XCTestCase {
         let date2 = Date(timeIntervalSince1970: 1_525_782_896) //08-05-2018
         
         XCTAssertEqual(date2.totalDays(from: date1), 30)
+        XCTAssertEqual(date1.totalDays(from: date2), 30)
     }
     
     public func testSubstration() {

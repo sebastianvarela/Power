@@ -74,7 +74,7 @@ public extension Date {
     
     public func totalDays(from date: Date) -> Int {
         if self < date {
-            return 0
+            return Calendar.current.dateComponents([.day], from: self, to: date).day ?? 0
         }
         return Calendar.current.dateComponents([.day], from: date, to: self).day ?? 0
     }
