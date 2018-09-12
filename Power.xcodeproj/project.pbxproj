@@ -101,6 +101,13 @@
 		E281243B2122CC4C00E4F6D0 /* Power.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28124322122CC4C00E4F6D0 /* Power.framework */; };
 		E28124562122CCE300E4F6D0 /* Power.h in Headers */ = {isa = PBXBuildFile; fileRef = E26053F12121880000D013B5 /* Power.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E28124572122CCE300E4F6D0 /* Power.h in Headers */ = {isa = PBXBuildFile; fileRef = E26053F12121880000D013B5 /* Power.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E28C30F42148F29F00DE964B /* MutablePropertyExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C30F32148F29F00DE964B /* MutablePropertyExtensionsTests.swift */; };
+		E28C30F52148F29F00DE964B /* MutablePropertyExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C30F32148F29F00DE964B /* MutablePropertyExtensionsTests.swift */; };
+		E28C30F62148F29F00DE964B /* MutablePropertyExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C30F32148F29F00DE964B /* MutablePropertyExtensionsTests.swift */; };
+		E28C30F82148F2B600DE964B /* MutablePropertyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C30F72148F2B600DE964B /* MutablePropertyExtensions.swift */; };
+		E28C30F92148F2B600DE964B /* MutablePropertyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C30F72148F2B600DE964B /* MutablePropertyExtensions.swift */; };
+		E28C30FA2148F2B600DE964B /* MutablePropertyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C30F72148F2B600DE964B /* MutablePropertyExtensions.swift */; };
+		E28C30FB2148F2B600DE964B /* MutablePropertyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C30F72148F2B600DE964B /* MutablePropertyExtensions.swift */; };
 		E2ACA8B82121A47500C5C41C /* ReactiveCocoaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8B72121A47500C5C41C /* ReactiveCocoaExtensions.swift */; };
 		E2ACA8BA2121A50100C5C41C /* DecimalUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8B92121A50100C5C41C /* DecimalUIExtensions.swift */; };
 		E2ACA8BE2121A62C00C5C41C /* DecimalUIExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8BC2121A60700C5C41C /* DecimalUIExtensionsTests.swift */; };
@@ -303,6 +310,8 @@
 		E28124322122CC4C00E4F6D0 /* Power.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Power.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E281243A2122CC4C00E4F6D0 /* Power-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Power-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E281244E2122CC5B00E4F6D0 /* Power.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Power.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28C30F32148F29F00DE964B /* MutablePropertyExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutablePropertyExtensionsTests.swift; sourceTree = "<group>"; };
+		E28C30F72148F2B600DE964B /* MutablePropertyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutablePropertyExtensions.swift; sourceTree = "<group>"; };
 		E2ACA8B72121A47500C5C41C /* ReactiveCocoaExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveCocoaExtensions.swift; sourceTree = "<group>"; };
 		E2ACA8B92121A50100C5C41C /* DecimalUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUIExtensions.swift; sourceTree = "<group>"; };
 		E2ACA8BC2121A60700C5C41C /* DecimalUIExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUIExtensionsTests.swift; sourceTree = "<group>"; };
@@ -668,6 +677,7 @@
 				E2ACA8C12121A6C600C5C41C /* SignalProducerExtensions.swift */,
 				E2ACA8C32121A78800C5C41C /* SignalExtensions.swift */,
 				E2ACA8C52121A7D900C5C41C /* ActionExtensions.swift */,
+				E28C30F72148F2B600DE964B /* MutablePropertyExtensions.swift */,
 			);
 			path = ReactiveSwift;
 			sourceTree = "<group>";
@@ -695,6 +705,7 @@
 			children = (
 				E260544A21218B8B00D013B5 /* SignalProducerExtensionsTests.swift */,
 				E2ACA8C92121A8A700C5C41C /* SignalExtensionsTests.swift */,
+				E28C30F32148F29F00DE964B /* MutablePropertyExtensionsTests.swift */,
 			);
 			path = ReactiveSwift;
 			sourceTree = "<group>";
@@ -1097,6 +1108,7 @@
 				E260542F21218B7600D013B5 /* UIStackViewExtensions.swift in Sources */,
 				E260542B21218B7600D013B5 /* TimeIntervalExtensions.swift in Sources */,
 				E260544021218B7600D013B5 /* UICollectionViewExtensions.swift in Sources */,
+				E28C30F82148F2B600DE964B /* MutablePropertyExtensions.swift in Sources */,
 				E260543D21218B7600D013B5 /* URLExtensions.swift in Sources */,
 				E260544221218B7600D013B5 /* BoolExtensions.swift in Sources */,
 				E260542C21218B7600D013B5 /* UIBarButtonItemExtensions.swift in Sources */,
@@ -1110,6 +1122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2FE5A482122FB9600A38D7A /* LocaleExtensionsTests.swift in Sources */,
+				E28C30F42148F29F00DE964B /* MutablePropertyExtensionsTests.swift in Sources */,
 				E2ACA8CB2121A8C200C5C41C /* SignalExtensionsTests.swift in Sources */,
 				E260545A21218B8C00D013B5 /* StringExtensionsTests.swift in Sources */,
 				E260545621218B8C00D013B5 /* URLExtensionsTests.swift in Sources */,
@@ -1156,6 +1169,7 @@
 				E28123F02122C3DD00E4F6D0 /* BoolExtensions.swift in Sources */,
 				E28123F92122C3DD00E4F6D0 /* LocaleExtensions.swift in Sources */,
 				E25665372126B54C0061CCF7 /* UserDefaultsWrapper.swift in Sources */,
+				E28C30F92148F2B600DE964B /* MutablePropertyExtensions.swift in Sources */,
 				E2FE5A4D21256C4D00A38D7A /* ConstantKey.swift in Sources */,
 				E28123F12122C3DD00E4F6D0 /* BundleExtensions.swift in Sources */,
 				E28123F42122C3DD00E4F6D0 /* DataExtensions.swift in Sources */,
@@ -1184,6 +1198,7 @@
 				E2FE5A442122DE3100A38D7A /* SignalExtensionsTests.swift in Sources */,
 				E20BA6032138809C005BA13B /* CollectionExtensionsTests.swift in Sources */,
 				E28124042122C3FF00E4F6D0 /* TimeIntervalExtensionsTests.swift in Sources */,
+				E28C30F52148F29F00DE964B /* MutablePropertyExtensionsTests.swift in Sources */,
 				E28124022122C3FF00E4F6D0 /* OptionalExtensionsTests.swift in Sources */,
 				E28123FF2122C3FF00E4F6D0 /* DateExtensionsTests.swift in Sources */,
 				E2FE5A5621256D0E00A38D7A /* UniqueValueTests.swift in Sources */,
@@ -1212,6 +1227,7 @@
 				E2FE59EF2122CE4200A38D7A /* StringExtensions.swift in Sources */,
 				E2FE59F62122CE4800A38D7A /* DataExtensions.swift in Sources */,
 				E25665382126B54D0061CCF7 /* UserDefaultsWrapper.swift in Sources */,
+				E28C30FA2148F2B600DE964B /* MutablePropertyExtensions.swift in Sources */,
 				E2FE5A4E21256C4E00A38D7A /* ConstantKey.swift in Sources */,
 				E2FE59F72122CE4800A38D7A /* DateExtensions.swift in Sources */,
 				E2FE59FB2122CE4800A38D7A /* LocaleExtensions.swift in Sources */,
@@ -1240,6 +1256,7 @@
 				E2FE5A462122DE3200A38D7A /* SignalExtensionsTests.swift in Sources */,
 				E20BA6002138806A005BA13B /* CharacterExtensionsTests.swift in Sources */,
 				E2FE5A172122CE6200A38D7A /* TimeIntervalExtensionsTests.swift in Sources */,
+				E28C30F62148F29F00DE964B /* MutablePropertyExtensionsTests.swift in Sources */,
 				E2FE5A152122CE6200A38D7A /* OptionalExtensionsTests.swift in Sources */,
 				E2FE5A122122CE6100A38D7A /* DateExtensionsTests.swift in Sources */,
 				E2FE5A5721256D0E00A38D7A /* UniqueValueTests.swift in Sources */,
@@ -1267,6 +1284,7 @@
 				E2FE59F02122CE4300A38D7A /* StringExtensions.swift in Sources */,
 				E2FE5A042122CE4900A38D7A /* DataExtensions.swift in Sources */,
 				E25665392126B54E0061CCF7 /* UserDefaultsWrapper.swift in Sources */,
+				E28C30FB2148F2B600DE964B /* MutablePropertyExtensions.swift in Sources */,
 				E2FE5A4F21256C4F00A38D7A /* ConstantKey.swift in Sources */,
 				E2FE5A052122CE4900A38D7A /* DateExtensions.swift in Sources */,
 				E2FE5A092122CE4900A38D7A /* LocaleExtensions.swift in Sources */,
