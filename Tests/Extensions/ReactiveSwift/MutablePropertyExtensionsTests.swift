@@ -4,7 +4,7 @@ import Result
 import XCTest
 
 public class MutablePropertyExtensionsTests: XCTestCase {
-    public func test() {
+    public func testSilentSwap() {
         let property = MutableProperty("hola")
         let finalValue = "chau"
         

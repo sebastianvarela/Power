@@ -18,6 +18,24 @@ public class SignalExtensionsTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
     
+    public func testObserveValuesOnUIScheduler() {
+        let expect = expectation(description: "checking value async")
+        let (signal, observer) = Signal<Int, NoError>.pipe()
+        let passValue = 69
+        
+        signal.observeValuesOnUIScheduler { value in
+            XCTAssertTrue(Thread.isMainThread)
+            XCTAssertEqual(value, passValue)
+            expect.fulfill()
+        }
+        
+        DispatchQueue.global(qos: .background).async {
+            observer.send(value: passValue)
+        }
+        
+        waitForExpectations(timeout: 1)
+    }
+    
     public func testOnValueReceivedWhenObserverSendAValue() {
         let expect = expectation(description: "checking value async")
         let (signal, observer) = Signal<Int, NoError>.pipe()
@@ -25,6 +43,7 @@ public class SignalExtensionsTests: XCTestCase {
         signal.onValueReceived {
             expect.fulfill()
         }
+        
         observer.send(value: 3)
         
         waitForExpectations(timeout: 1)
