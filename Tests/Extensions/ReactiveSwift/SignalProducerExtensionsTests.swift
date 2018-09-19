@@ -4,6 +4,123 @@ import Result
 import XCTest
 
 public class SignalProducerExtensionsTests: XCTestCase {
+    public func testLifeCycleWithProducerThatEmitValueCompleted() {
+        let expect = expectation(description: "Checking producer steps")
+        expect.expectedFulfillmentCount = 5
+
+        let producer = SignalProducer<String, NoError> { observer, _ in
+            observer.send(value: "😚")
+            observer.sendCompleted()
+        }
+        
+        var step = 0
+        producer
+            .onStarting {
+                step += 1
+                XCTAssertEqual(step, 1)
+                expect.fulfill()
+            }
+            .onValue { _ in
+                step += 1
+                XCTAssertEqual(step, 2)
+                expect.fulfill()
+            }
+            .onCompleted {
+                step += 1
+                XCTAssertEqual(step, 3)
+                expect.fulfill()
+            }
+            .onTerminated {
+                step += 1
+                XCTAssertEqual(step, 4)
+                expect.fulfill()
+            }
+            .onStarted {
+                step += 1
+                XCTAssertEqual(step, 5)
+                expect.fulfill()
+            }
+            .start()
+        
+        waitForExpectations(timeout: 1)
+    }
+    
+    public func testLifeCycleWithProducerThatEmitValueError() {
+        let expect = expectation(description: "Checking producer steps")
+        expect.expectedFulfillmentCount = 5
+        
+        let producer = SignalProducer<String, NSError> { observer, _ in
+            observer.send(value: "😚")
+            observer.send(error: NSError(domain: "wawa", code: 214, userInfo: nil))
+        }
+        
+        var step = 0
+        producer
+            .onStarting {
+                step += 1
+                XCTAssertEqual(step, 1)
+                expect.fulfill()
+            }
+            .onValue { _ in
+                step += 1
+                XCTAssertEqual(step, 2)
+                expect.fulfill()
+            }
+            .onFailed { _ in
+                step += 1
+                XCTAssertEqual(step, 3)
+                expect.fulfill()
+            }
+            .onTerminated {
+                step += 1
+                XCTAssertEqual(step, 4)
+                expect.fulfill()
+            }
+            .onStarted {
+                step += 1
+                XCTAssertEqual(step, 5)
+                expect.fulfill()
+            }
+            .start()
+        
+        waitForExpectations(timeout: 1)
+    }
+    
+    public func testLifeCycleWithProducerThatEmitError() {
+        let expect = expectation(description: "Checking producer steps")
+        expect.expectedFulfillmentCount = 4
+        
+        let producer = SignalProducer<String, NSError> { observer, _ in
+            observer.send(error: NSError(domain: "wawa", code: 214, userInfo: nil))
+        }
+        
+        var step = 0
+        producer
+            .onStarting {
+                step += 1
+                XCTAssertEqual(step, 1)
+                expect.fulfill()
+            }
+            .onFailed { _ in
+                step += 1
+                XCTAssertEqual(step, 2)
+                expect.fulfill()
+            }
+            .onTerminated {
+                step += 1
+                XCTAssertEqual(step, 3)
+                expect.fulfill()
+            }
+            .onStarted {
+                step += 1
+                XCTAssertEqual(step, 4)
+                expect.fulfill()
+            }
+            .start()
+        
+        waitForExpectations(timeout: 1)
+    }
+    
     public func testOnValue() {
         let value = "hola"
         let expect = expectation(description: "checking value async")
