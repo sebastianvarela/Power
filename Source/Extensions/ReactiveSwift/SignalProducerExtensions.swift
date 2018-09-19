@@ -2,6 +2,14 @@ import ReactiveSwift
 import Result
 
 public extension SignalProducer {
+    public func onStarting(action: @escaping (() -> Void)) -> SignalProducer<Value, Error> {
+        return on(starting: action)
+    }
+
+    public func onStarted(action: @escaping (() -> Void)) -> SignalProducer<Value, Error> {
+        return on(started: action)
+    }
+    
     public func onFailed(action: @escaping ((Error) -> Void)) -> SignalProducer<Value, Error> {
         return on(failed: action)
     }
@@ -12,6 +20,10 @@ public extension SignalProducer {
     
     public func onCompleted(action: @escaping (() -> Void)) -> SignalProducer<Value, Error> {
         return on(completed: action)
+    }
+    
+    public func onTerminated(action: @escaping (() -> Void)) -> SignalProducer<Value, Error> {
+        return on(terminated: action)
     }
     
     public func mapToVoid() -> SignalProducer<Void, Error> {
