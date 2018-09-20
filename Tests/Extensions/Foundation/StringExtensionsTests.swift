@@ -2,6 +2,15 @@
 import XCTest
 
 public class StringExtensionsTests: XCTestCase {
+    public func testDecodeJsonString() {
+        let string = "[1,2,3]"
+        
+        let array = string.decodeJsonString() as [Int]?
+        
+        XCTAssertEqual(array, [1, 2, 3])
+        XCTAssertNil(string.decodeJsonString() as String?)
+    }
+    
     public func testDecimalSpanishParser() {
         XCTAssertEqual("".decimalSpanishValue, nil)
         XCTAssertEqual("123,45".decimalSpanishValue, 123.45)

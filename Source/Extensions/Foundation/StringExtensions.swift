@@ -1,12 +1,20 @@
 import Foundation
 
 public extension String {
+    public func decodeJsonString<T>() -> T? where T: Decodable {
+        guard let data = self.data(using: .utf8),
+              let object = try? JSONDecoder().decode(T.self, from: data) else {
+            return nil
+        }
+        return object
+    }
+    
     public var decimalSpanishValue: Decimal? {
         return Decimal(string: self, locale: Locale.spanish)
     }
     
     public var base64Encoded: String {
-        guard let plainData = data(using: .utf8) else {
+        guard let plainData = dataUTF8 else {
             fatalError("could not get data from string")
         }
         let base64String = plainData.base64EncodedString(options: Data.Base64EncodingOptions.endLineWithCarriageReturn)

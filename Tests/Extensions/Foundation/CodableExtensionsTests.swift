@@ -8,5 +8,6 @@ public class CodableExtensionsTests: XCTestCase {
         
         XCTAssertEqual(array.jsonString, "[1,2,3]")
         XCTAssertEqual(dict.jsonString, "{\"1\":\"one\"}")
+        XCTAssertNil(5.jsonString)
     }
 }
