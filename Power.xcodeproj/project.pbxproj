@@ -143,6 +143,13 @@
 		E2BC2DB4215383BA004395BE /* BoolExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC2DB3215383BA004395BE /* BoolExtensionsTests.swift */; };
 		E2BC2DB5215383BA004395BE /* BoolExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC2DB3215383BA004395BE /* BoolExtensionsTests.swift */; };
 		E2BC2DB6215383BA004395BE /* BoolExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC2DB3215383BA004395BE /* BoolExtensionsTests.swift */; };
+		E2BC2DBB21538630004395BE /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC2DB72153862D004395BE /* CodableExtensions.swift */; };
+		E2BC2DBC21538631004395BE /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC2DB72153862D004395BE /* CodableExtensions.swift */; };
+		E2BC2DBD21538632004395BE /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC2DB72153862D004395BE /* CodableExtensions.swift */; };
+		E2BC2DBE21538634004395BE /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC2DB72153862D004395BE /* CodableExtensions.swift */; };
+		E2BC2DC021538643004395BE /* CodableExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC2DBF21538643004395BE /* CodableExtensionsTests.swift */; };
+		E2BC2DC121538643004395BE /* CodableExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC2DBF21538643004395BE /* CodableExtensionsTests.swift */; };
+		E2BC2DC221538643004395BE /* CodableExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC2DBF21538643004395BE /* CodableExtensionsTests.swift */; };
 		E2D55FF621218E32004C7C2F /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D55FF221218E31004C7C2F /* ReactiveSwift.framework */; };
 		E2D55FF721218E32004C7C2F /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D55FF321218E31004C7C2F /* ReactiveCocoa.framework */; };
 		E2D55FF821218E32004C7C2F /* ReactiveMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D55FF421218E31004C7C2F /* ReactiveMapKit.framework */; };
@@ -358,6 +365,8 @@
 		E2ACA8C52121A7D900C5C41C /* ActionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionExtensions.swift; sourceTree = "<group>"; };
 		E2ACA8C92121A8A700C5C41C /* SignalExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalExtensionsTests.swift; sourceTree = "<group>"; };
 		E2BC2DB3215383BA004395BE /* BoolExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolExtensionsTests.swift; sourceTree = "<group>"; };
+		E2BC2DB72153862D004395BE /* CodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtensions.swift; sourceTree = "<group>"; };
+		E2BC2DBF21538643004395BE /* CodableExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtensionsTests.swift; sourceTree = "<group>"; };
 		E2D55FF221218E31004C7C2F /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		E2D55FF321218E31004C7C2F /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		E2D55FF421218E31004C7C2F /* ReactiveMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMapKit.framework; path = Carthage/Build/iOS/ReactiveMapKit.framework; sourceTree = "<group>"; };
@@ -713,6 +722,7 @@
 				E260542521218B7500D013B5 /* BoolExtensions.swift */,
 				E260541121218B7300D013B5 /* BundleExtensions.swift */,
 				E260541421218B7300D013B5 /* CharacterExtensions.swift */,
+				E2BC2DB72153862D004395BE /* CodableExtensions.swift */,
 				E260541E21218B7400D013B5 /* CollectionExtensions.swift */,
 				E260540B21218B7200D013B5 /* DataExtensions.swift */,
 				E260541521218B7400D013B5 /* DateExtensions.swift */,
@@ -746,6 +756,7 @@
 				E260545021218B8C00D013B5 /* ArrayExtensionsTests.swift */,
 				E2BC2DB3215383BA004395BE /* BoolExtensionsTests.swift */,
 				E20BA5FD2138806A005BA13B /* CharacterExtensionsTests.swift */,
+				E2BC2DBF21538643004395BE /* CodableExtensionsTests.swift */,
 				E20BA6012138809C005BA13B /* CollectionExtensionsTests.swift */,
 				E260544621218B8B00D013B5 /* DateExtensionsTests.swift */,
 				E260544521218B8B00D013B5 /* DecimalExtensionsTests.swift */,
@@ -1168,6 +1179,7 @@
 				E23E36F72121901800A81C2A /* LocaleExtensions.swift in Sources */,
 				E260543821218B7600D013B5 /* DecimalExtensions.swift in Sources */,
 				E23E37092121997C00A81C2A /* PowerBag.swift in Sources */,
+				E2BC2DBB21538630004395BE /* CodableExtensions.swift in Sources */,
 				E28123B52121CE3F00E4F6D0 /* Logger.swift in Sources */,
 				E260542921218B7600D013B5 /* IntExtensions.swift in Sources */,
 				E260542F21218B7600D013B5 /* UIStackViewExtensions.swift in Sources */,
@@ -1203,6 +1215,7 @@
 				E260545321218B8C00D013B5 /* DecimalExtensionsTests.swift in Sources */,
 				E20BA5FE2138806A005BA13B /* CharacterExtensionsTests.swift in Sources */,
 				E260545421218B8C00D013B5 /* DateExtensionsTests.swift in Sources */,
+				E2BC2DC021538643004395BE /* CodableExtensionsTests.swift in Sources */,
 				E2FE5A5521256D0E00A38D7A /* UniqueValueTests.swift in Sources */,
 				E260545E21218B8C00D013B5 /* ArrayExtensionsTests.swift in Sources */,
 				E260545F21218B8C00D013B5 /* UICollectionViewCellsExtensionsTests.swift in Sources */,
@@ -1233,6 +1246,7 @@
 				E28123F22122C3DD00E4F6D0 /* CharacterExtensions.swift in Sources */,
 				E2FE5A3A2122DE0D00A38D7A /* SignalProducerExtensions.swift in Sources */,
 				E28123F82122C3DD00E4F6D0 /* IntExtensions.swift in Sources */,
+				E2BC2DBC21538631004395BE /* CodableExtensions.swift in Sources */,
 				E28124072122C41800E4F6D0 /* Logger.swift in Sources */,
 				E28123FD2122C3DD00E4F6D0 /* URLExtensions.swift in Sources */,
 				E28C310C2149436C00DE964B /* Reachability.swift in Sources */,
@@ -1275,6 +1289,7 @@
 				E28124042122C3FF00E4F6D0 /* TimeIntervalExtensionsTests.swift in Sources */,
 				E28C30F52148F29F00DE964B /* MutablePropertyExtensionsTests.swift in Sources */,
 				E28124022122C3FF00E4F6D0 /* OptionalExtensionsTests.swift in Sources */,
+				E2BC2DC121538643004395BE /* CodableExtensionsTests.swift in Sources */,
 				E28123FF2122C3FF00E4F6D0 /* DateExtensionsTests.swift in Sources */,
 				E2FE5A5621256D0E00A38D7A /* UniqueValueTests.swift in Sources */,
 				E28C31022149117000DE964B /* NSSetExtensionsTests.swift in Sources */,
@@ -1299,6 +1314,7 @@
 				E2FE59FA2122CE4800A38D7A /* IntExtensions.swift in Sources */,
 				E2FE5A3D2122DE0E00A38D7A /* SignalProducerExtensions.swift in Sources */,
 				E2FE59F42122CE4800A38D7A /* CharacterExtensions.swift in Sources */,
+				E2BC2DBD21538632004395BE /* CodableExtensions.swift in Sources */,
 				E2FE5A0F2122CE5400A38D7A /* Logger.swift in Sources */,
 				E2FE59FE2122CE4800A38D7A /* URLExtensions.swift in Sources */,
 				E28C310D2149436C00DE964B /* Reachability.swift in Sources */,
@@ -1327,6 +1343,7 @@
 			files = (
 				E2FE5A162122CE6200A38D7A /* StringExtensionsTests.swift in Sources */,
 				E2FE5A4A2122FB9600A38D7A /* LocaleExtensionsTests.swift in Sources */,
+				E2BC2DC221538643004395BE /* CodableExtensionsTests.swift in Sources */,
 				E2FE5A5B21256D1B00A38D7A /* ConstantKeyTests.swift in Sources */,
 				E2BC2DB6215383BA004395BE /* BoolExtensionsTests.swift in Sources */,
 				E2FE5A452122DE3200A38D7A /* SignalProducerExtensionsTests.swift in Sources */,
@@ -1372,6 +1389,7 @@
 				E28C30FB2148F2B600DE964B /* MutablePropertyExtensions.swift in Sources */,
 				E2FE5A4F21256C4F00A38D7A /* ConstantKey.swift in Sources */,
 				E2FE5A052122CE4900A38D7A /* DateExtensions.swift in Sources */,
+				E2BC2DBE21538634004395BE /* CodableExtensions.swift in Sources */,
 				E2FE5A092122CE4900A38D7A /* LocaleExtensions.swift in Sources */,
 				E2FE59FF2122CE4900A38D7A /* ArrayExtensions.swift in Sources */,
 				E2FE5A012122CE4900A38D7A /* BundleExtensions.swift in Sources */,
