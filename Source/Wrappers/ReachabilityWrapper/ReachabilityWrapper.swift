@@ -54,7 +54,7 @@ public class DefaultReachabilityWrapper: ReachabilityWrapper {
             }
             
             try reachability.startNotifier()
-        } catch let error {
+        } catch let error as NSError {
             logError("[Reachability] \(error)")
             fatalError("Failed to initialize Reachability")
         }
