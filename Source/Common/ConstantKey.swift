@@ -13,6 +13,15 @@ public struct ConstantKey: RawRepresentable, Equatable, Hashable {
         self.rawValue = rawValue
         self.hashValue = rawValue.hashValue
     }
+
+    public init(_ url: URL) {
+        self.rawValue = url.absoluteString
+        self.hashValue = rawValue.hashValue
+    }
+    
+    public var url: URL? {
+        return URL(string: rawValue)
+    }
 }
 
 public func + (lhs: ConstantKey, rhs: ConstantKey) -> ConstantKey {

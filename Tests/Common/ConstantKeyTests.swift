@@ -39,4 +39,11 @@ public class ConstantKeyTests: XCTestCase {
         
         XCTAssertEqual(value1 + value2, value3)
     }
+    
+    public func testConstantWithURLValue() {
+        let url = URL.fromString("https://www.google.com")
+        let value = ConstantKey(url)
+        
+        XCTAssertEqual(value.url, url)
+    }
 }
