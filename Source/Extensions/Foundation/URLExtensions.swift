@@ -20,6 +20,23 @@ public extension URL {
         fatalError("Invalid url")
     }
     
+    public var anchor: String? {
+        guard let urlAnchor = absoluteString.split(separator: "#").last, urlAnchor != absoluteString else {
+            return nil
+        }
+        return String(urlAnchor)
+    }
+    
+    public static func processQuery(query: String) -> [URLQueryItem] {
+        return query.split(separator: "&").map { slice in
+            let parts = slice.split(separator: "=")
+            if let first = parts.first, let last = parts.last, first != last, parts.count == 2 {
+                return URLQueryItem(name: String(first), value: String(last))
+            }
+            return URLQueryItem(name: String(slice), value: nil)
+        }
+    }
+    
     static func fromString(_ string: String) -> URL {
         guard let url = URL(string: string) else {
             fatalError("Cannot build url from string: \"\(string)\"")

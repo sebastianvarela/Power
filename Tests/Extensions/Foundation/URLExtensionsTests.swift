@@ -23,4 +23,20 @@ public class URLExtensionsTests: XCTestCase {
         
         XCTAssertEqual(url.absoluteStringByTrimmingQuery, URL.fromString("http://www.cuenca.com"))
     }
+    
+    public func testURLWithAnchor() {
+        let urlWithAnchor = URL.fromString("http://www.hola.com#home")
+        let urlWithoutAnchor = URL.fromString("http://www.chau.com")
+        
+        XCTAssertEqual(urlWithAnchor.anchor, "home")
+        XCTAssertNil(urlWithoutAnchor.anchor)
+    }
+    
+    public func testProcessQuery() {
+        let query1 = URL.processQuery(query: "home&hola=chau")
+        let query2 = URL.processQuery(query: "hi")
+        
+        XCTAssertEqual(query1, [URLQueryItem(name: "home", value: nil), URLQueryItem(name: "hola", value: "chau")])
+        XCTAssertEqual(query2, [URLQueryItem(name: "hi", value: nil)])
+    }
 }
