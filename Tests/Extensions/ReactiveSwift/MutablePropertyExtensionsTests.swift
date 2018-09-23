@@ -18,4 +18,24 @@ public class MutablePropertyExtensionsTests: XCTestCase {
         property.silentSwap(finalValue)
         waitForExpectations(timeout: 1)
     }
+    
+    public func testIsNilAndIsNotNil() {
+        let property = MutableProperty<String?>(nil)
+        let finalValue = "chau"
+        
+        let expect = expectation(description: "checking value async")
+        expect.expectedFulfillmentCount = 2
+        
+        property.isNil.signal.observeValues { isNil in
+            XCTAssertFalse(isNil)
+            expect.fulfill()
+        }
+        property.isNotNil.signal.observeValues { isNotNil in
+            XCTAssertTrue(isNotNil)
+            expect.fulfill()
+        }
+        
+        property.silentSwap(finalValue)
+        waitForExpectations(timeout: 1)
+    }
 }

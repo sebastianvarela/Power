@@ -6,3 +6,13 @@ public extension MutableProperty {
         swap(newValue)
     }
 }
+
+public extension MutableProperty where Value: OptionalProtocol {
+    public var isNil: Property<Bool> {
+        return map { $0.optional == nil }
+    }
+    
+    public var isNotNil: Property<Bool> {
+        return map { $0.optional != nil }
+    }
+}
