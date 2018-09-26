@@ -26,12 +26,32 @@ public extension Signal {
     }
     
     @discardableResult
+    public func onValueReceivedOnUIScheduler(_ action: @escaping (()) -> Void) -> Disposable? {
+        return observe(on: UIScheduler())
+            .observeResult { result in
+                if case .success = result {
+                    action(())
+                }
+            }
+    }
+    
+    @discardableResult
     public func onErrorReceived(_ action: @escaping (()) -> Void) -> Disposable? {
         return observeResult { result in
             if case .failure = result {
                 action(())
             }
         }
+    }
+    
+    @discardableResult
+    public func onErrorReceivedOnUIScheduler(_ action: @escaping (()) -> Void) -> Disposable? {
+        return observe(on: UIScheduler())
+            .observeResult { result in
+                if case .failure = result {
+                    action(())
+                }
+            }
     }
 }
 

@@ -85,6 +85,38 @@ public class SignalExtensionsTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
     
+    public func testOnValueReceivedOnUISchedulerWhenObserverSendAValue() {
+        let expect = expectation(description: "checking value async")
+        let (signal, observer) = Signal<Int, NoError>.pipe()
+        
+        signal.onValueReceivedOnUIScheduler {
+            XCTAssertTrue(Thread.isMainThread)
+            expect.fulfill()
+        }
+        
+        DispatchQueue.global(qos: .background).async {
+            observer.send(value: 3)
+        }
+        
+        waitForExpectations(timeout: 1)
+    }
+    
+    public func testOnErrorReceivedOnUISchedulerWhenObserverSendAValue() {
+        let expect = expectation(description: "checking error async")
+        let (signal, observer) = Signal<Int, NSError>.pipe()
+        
+        signal.onErrorReceivedOnUIScheduler {
+            XCTAssertTrue(Thread.isMainThread)
+            expect.fulfill()
+        }
+        
+        DispatchQueue.global(qos: .background).async {
+            observer.send(error: NSError(domain: "error", code: 123, userInfo: nil))
+        }
+        
+        waitForExpectations(timeout: 1)
+    }
+    
     public func testBindingSignalToObserverWithNoError() {
         let expect = expectation(description: "checking value async throught binding")
         let (signal2, observer2) = Signal<Int, NoError>.pipe()
