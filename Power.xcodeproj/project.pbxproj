@@ -154,6 +154,9 @@
 		E2D55FF721218E32004C7C2F /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D55FF321218E31004C7C2F /* ReactiveCocoa.framework */; };
 		E2D55FF821218E32004C7C2F /* ReactiveMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D55FF421218E31004C7C2F /* ReactiveMapKit.framework */; };
 		E2D55FF921218E32004C7C2F /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D55FF521218E31004C7C2F /* Result.framework */; };
+		E2EC6DCB215EB09C00596B6E /* PermissionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC6DCA215EB09C00596B6E /* PermissionWrapper.swift */; };
+		E2EC6DCF215EB0C700596B6E /* PermissionAuthorizationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC6DCE215EB0C700596B6E /* PermissionAuthorizationStatus.swift */; };
+		E2EC6DD1215EB0E600596B6E /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC6DD0215EB0E600596B6E /* Permission.swift */; };
 		E2FE59DB2122CDC800A38D7A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FE59D82122CDC800A38D7A /* Result.framework */; };
 		E2FE59DC2122CDC800A38D7A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FE59D92122CDC800A38D7A /* ReactiveCocoa.framework */; };
 		E2FE59DD2122CDC800A38D7A /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FE59DA2122CDC800A38D7A /* ReactiveSwift.framework */; };
@@ -371,6 +374,9 @@
 		E2D55FF321218E31004C7C2F /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		E2D55FF421218E31004C7C2F /* ReactiveMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMapKit.framework; path = Carthage/Build/iOS/ReactiveMapKit.framework; sourceTree = "<group>"; };
 		E2D55FF521218E31004C7C2F /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		E2EC6DCA215EB09C00596B6E /* PermissionWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionWrapper.swift; sourceTree = "<group>"; };
+		E2EC6DCE215EB0C700596B6E /* PermissionAuthorizationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionAuthorizationStatus.swift; sourceTree = "<group>"; };
+		E2EC6DD0215EB0E600596B6E /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
 		E2FE59D82122CDC800A38D7A /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/watchOS/Result.framework; sourceTree = "<group>"; };
 		E2FE59D92122CDC800A38D7A /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/watchOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		E2FE59DA2122CDC800A38D7A /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/watchOS/ReactiveSwift.framework; sourceTree = "<group>"; };
@@ -518,6 +524,7 @@
 		E256652F2126B4E90061CCF7 /* Wrappers */ = {
 			isa = PBXGroup;
 			children = (
+				E2EC6DC9215EB08C00596B6E /* PermissionWrapper */,
 				E28C31092149435900DE964B /* ReachabilityWrapper */,
 				E256652C2126B4AE0061CCF7 /* UserDefaultsWrapper */,
 				E2FE5A5D2125954400A38D7A /* KeychainWrapper */,
@@ -780,6 +787,16 @@
 				E28C30F32148F29F00DE964B /* MutablePropertyExtensionsTests.swift */,
 			);
 			path = ReactiveSwift;
+			sourceTree = "<group>";
+		};
+		E2EC6DC9215EB08C00596B6E /* PermissionWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				E2EC6DCA215EB09C00596B6E /* PermissionWrapper.swift */,
+				E2EC6DCE215EB0C700596B6E /* PermissionAuthorizationStatus.swift */,
+				E2EC6DD0215EB0E600596B6E /* Permission.swift */,
+			);
+			path = PermissionWrapper;
 			sourceTree = "<group>";
 		};
 		E2FE59D72122CD9700A38D7A /* watchOS */ = {
@@ -1148,6 +1165,7 @@
 				E2FE5A632125958500A38D7A /* KeychainQuery.swift in Sources */,
 				E2ACA8B82121A47500C5C41C /* ReactiveCocoaExtensions.swift in Sources */,
 				E2FE5A1A2122CFBA00A38D7A /* StringUIExtensions.swift in Sources */,
+				E2EC6DCF215EB0C700596B6E /* PermissionAuthorizationStatus.swift in Sources */,
 				E260542821218B7600D013B5 /* DataExtensions.swift in Sources */,
 				E28C310B2149436C00DE964B /* Reachability.swift in Sources */,
 				E260543621218B7600D013B5 /* UIViewExtensions.swift in Sources */,
@@ -1175,8 +1193,10 @@
 				E260544121218B7600D013B5 /* UIColorExtensions.swift in Sources */,
 				E2ACA8C62121A7D900C5C41C /* ActionExtensions.swift in Sources */,
 				E2FE5A67212595B800A38D7A /* KeychainWrapper.swift in Sources */,
+				E2EC6DD1215EB0E600596B6E /* Permission.swift in Sources */,
 				E260543C21218B7600D013B5 /* UIViewControllerExtensions.swift in Sources */,
 				E23E36F72121901800A81C2A /* LocaleExtensions.swift in Sources */,
+				E2EC6DCB215EB09C00596B6E /* PermissionWrapper.swift in Sources */,
 				E260543821218B7600D013B5 /* DecimalExtensions.swift in Sources */,
 				E23E37092121997C00A81C2A /* PowerBag.swift in Sources */,
 				E2BC2DBB21538630004395BE /* CodableExtensions.swift in Sources */,
