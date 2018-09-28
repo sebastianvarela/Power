@@ -247,4 +247,25 @@ public class SignalProducerExtensionsTests: XCTestCase {
         
         waitForExpectations(timeout: 1)
     }
+    
+    public func testStartWithObserverAndSendValueOnSuccess() {
+        let expectCompleted = expectation(description: "Complete event")
+
+        let producer1 = SignalProducer<Int, NSError> { observer, _ in
+            observer.send(value: 1)
+            observer.sendCompleted()
+        }
+        let producer2 = SignalProducer<String, NSError> { observer, lifetime in
+            lifetime += producer1.start(observer, replaceWithValue: "hola")
+        }
+        
+        producer2.startWithResult { result in
+            if let value = result.value {
+                XCTAssertEqual(value, "hola")
+                expectCompleted.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout: 1)
+    }
 }

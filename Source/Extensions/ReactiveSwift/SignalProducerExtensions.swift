@@ -43,4 +43,14 @@ public extension SignalProducer {
             }
         }
     }
+
+    @discardableResult
+    public func start<OtherValue>(_ observer: Signal<OtherValue, Error>.Observer, replaceWithValue value: OtherValue) -> Disposable {
+        return start(observer) { _ in value }
+    }
+    
+    @discardableResult
+    public func start<OtherValue>(_ observer: Signal<OtherValue, Error>.Observer, mapValue: @escaping (Value) -> OtherValue) -> Disposable {
+        return map(mapValue).start(observer)
+    }
 }
