@@ -2,6 +2,20 @@
 import XCTest
 
 public class BoolExtensionsTests: XCTestCase {
+    public func testInits() {
+        XCTAssertEqual(Bool(onOffString: "on"), true)
+        XCTAssertEqual(Bool(onOffString: "ON"), true)
+        XCTAssertEqual(Bool(onOffString: "On"), true)
+        XCTAssertEqual(Bool(onOffString: "off"), false)
+        XCTAssertEqual(Bool(onOffString: "OFF"), false)
+        XCTAssertEqual(Bool(onOffString: "Off"), false)
+        XCTAssertNil(Bool(onOffString: "caca"))
+
+        XCTAssertEqual(Bool(oneZeroString: "1"), true)
+        XCTAssertEqual(Bool(oneZeroString: "0"), false)
+        XCTAssertNil(Bool(oneZeroString: "caca"))
+    }
+    
     public func testIsFalse() {
         XCTAssertTrue(false.isFalse)
         XCTAssertFalse(true.isFalse)
