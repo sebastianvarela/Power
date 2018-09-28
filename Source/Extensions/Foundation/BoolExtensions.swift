@@ -16,6 +16,22 @@ public extension Bool {
         default: return nil
         }
     }
+    
+    public init?(enabledDisabledString: String) {
+        switch enabledDisabledString.uppercased() {
+        case "ENABLED": self = true
+        case "DISABLED": self = false
+        default: return nil
+        }
+    }
+    
+    public init?(enableDisableString: String) {
+        switch enableDisableString.uppercased() {
+        case "ENABLE": self = true
+        case "DISABLE": self = false
+        default: return nil
+        }
+    }
 
     public var isFalse: Bool {
         return !self
@@ -31,6 +47,14 @@ public extension Bool {
     
     public var trueFalseString: String {
         return self ? "True" : "False"
+    }
+    
+    public var enabledDisabledString: String {
+        return self ? "Enabled" : "Disabled"
+    }
+    
+    public var enableDisableString: String {
+        return self ? "Enable" : "Disable"
     }
     
     public var oneZeroString: String {

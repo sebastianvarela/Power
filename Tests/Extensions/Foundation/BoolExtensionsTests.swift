@@ -14,6 +14,22 @@ public class BoolExtensionsTests: XCTestCase {
         XCTAssertEqual(Bool(oneZeroString: "1"), true)
         XCTAssertEqual(Bool(oneZeroString: "0"), false)
         XCTAssertNil(Bool(oneZeroString: "caca"))
+
+        XCTAssertEqual(Bool(enabledDisabledString: "enabled"), true)
+        XCTAssertEqual(Bool(enabledDisabledString: "ENABLED"), true)
+        XCTAssertEqual(Bool(enabledDisabledString: "Enabled"), true)
+        XCTAssertEqual(Bool(enabledDisabledString: "disabled"), false)
+        XCTAssertEqual(Bool(enabledDisabledString: "DISABLED"), false)
+        XCTAssertEqual(Bool(enabledDisabledString: "Disabled"), false)
+        XCTAssertNil(Bool(enabledDisabledString: "caca"))
+
+        XCTAssertEqual(Bool(enableDisableString: "enable"), true)
+        XCTAssertEqual(Bool(enableDisableString: "ENABLE"), true)
+        XCTAssertEqual(Bool(enableDisableString: "Enable"), true)
+        XCTAssertEqual(Bool(enableDisableString: "disable"), false)
+        XCTAssertEqual(Bool(enableDisableString: "DISABLE"), false)
+        XCTAssertEqual(Bool(enableDisableString: "Disable"), false)
+        XCTAssertNil(Bool(enableDisableString: "caca"))
     }
     
     public func testIsFalse() {
@@ -35,7 +51,17 @@ public class BoolExtensionsTests: XCTestCase {
         XCTAssertEqual(false.trueFalseString, "False")
         XCTAssertEqual(true.trueFalseString, "True")
     }
-    
+
+    public func testEnableDisableString() {
+        XCTAssertEqual(false.enableDisableString, "Disable")
+        XCTAssertEqual(true.enableDisableString, "Enable")
+    }
+
+    public func testEnabledDisabledString() {
+        XCTAssertEqual(false.enabledDisabledString, "Disabled")
+        XCTAssertEqual(true.enabledDisabledString, "Enabled")
+    }
+
     public func testOneZeroString() {
         XCTAssertEqual(false.oneZeroString, "0")
         XCTAssertEqual(true.oneZeroString, "1")
