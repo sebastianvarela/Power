@@ -1,6 +1,10 @@
 import Foundation
 
 public class JSONParser {
+    public init() {
+        
+    }
+    
     public func unparse<T: Codable>(_ model: T) -> String? {
         guard let modelData = try? JSONEncoder().encode(model) else {
             return nil
