@@ -32,10 +32,7 @@ public class KeychainWrapperTests: XCTestCase {
     }
     
     public func testReadWriteDeleteData() {
-        guard let value = "some string".dataUTF8 else {
-            XCTFail("Cannot generate Data from path")
-            return
-        }
+        let value = "some string".dataUTF8
 
         let account = ConstantKey("readWriteTestForData")
 

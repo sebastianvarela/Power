@@ -68,7 +68,7 @@ public class StringExtensionsTests: XCTestCase {
     public func testStringToDataConvertion() {
         let message = "Pablito clavó un clavito"
         
-        XCTAssertEqual(message.dataUTF8?.stringUTF8, message)
+        XCTAssertEqual(message.dataUTF8.stringUTF8, message)
     }
     
     public func testReplacedPercentEncodingFromLatinToUTF8() {

@@ -14,10 +14,7 @@ public extension String {
     }
     
     public var base64Encoded: String {
-        guard let plainData = dataUTF8 else {
-            fatalError("could not get data from string")
-        }
-        let base64String = plainData.base64EncodedString(options: Data.Base64EncodingOptions.endLineWithCarriageReturn)
+        let base64String = dataUTF8.base64EncodedString(options: Data.Base64EncodingOptions.endLineWithCarriageReturn)
         return base64String
     }
     
@@ -29,8 +26,11 @@ public extension String {
         return decodedString as String?
     }
     
-    public var dataUTF8: Data? {
-        return data(using: String.Encoding.utf8)
+    public var dataUTF8: Data {
+        guard let utf8 = data(using: String.Encoding.utf8) else {
+            fatalError("A convertion from String to UTF8 never fails")
+        }
+        return utf8
     }
     
     public var isNotEmpty: Bool {

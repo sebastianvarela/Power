@@ -133,6 +133,13 @@
 		E28C312421494B7800DE964B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28C312321494B5A00DE964B /* SystemConfiguration.framework */; };
 		E28C312621494B7E00DE964B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28C312021494B4300DE964B /* SystemConfiguration.framework */; };
 		E28C312B21494C4F00DE964B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28C312A21494C4200DE964B /* SystemConfiguration.framework */; };
+		E28DB54B21622A8700E975CA /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28DB54A21622A8700E975CA /* JSONParser.swift */; };
+		E28DB54C21622A8700E975CA /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28DB54A21622A8700E975CA /* JSONParser.swift */; };
+		E28DB54D21622A8700E975CA /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28DB54A21622A8700E975CA /* JSONParser.swift */; };
+		E28DB54E21622A8700E975CA /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28DB54A21622A8700E975CA /* JSONParser.swift */; };
+		E28DB55021622E1A00E975CA /* JSONParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28DB54F21622E1A00E975CA /* JSONParserTests.swift */; };
+		E28DB55121622E1A00E975CA /* JSONParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28DB54F21622E1A00E975CA /* JSONParserTests.swift */; };
+		E28DB55221622E1A00E975CA /* JSONParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28DB54F21622E1A00E975CA /* JSONParserTests.swift */; };
 		E2ACA8B82121A47500C5C41C /* ReactiveCocoaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8B72121A47500C5C41C /* ReactiveCocoaExtensions.swift */; };
 		E2ACA8BA2121A50100C5C41C /* DecimalUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8B92121A50100C5C41C /* DecimalUIExtensions.swift */; };
 		E2ACA8BE2121A62C00C5C41C /* DecimalUIExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACA8BC2121A60700C5C41C /* DecimalUIExtensionsTests.swift */; };
@@ -360,6 +367,8 @@
 		E28C312021494B4300DE964B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E28C312321494B5A00DE964B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		E28C312A21494C4200DE964B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS11.4.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		E28DB54A21622A8700E975CA /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		E28DB54F21622E1A00E975CA /* JSONParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParserTests.swift; sourceTree = "<group>"; };
 		E2ACA8B72121A47500C5C41C /* ReactiveCocoaExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveCocoaExtensions.swift; sourceTree = "<group>"; };
 		E2ACA8B92121A50100C5C41C /* DecimalUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUIExtensions.swift; sourceTree = "<group>"; };
 		E2ACA8BC2121A60700C5C41C /* DecimalUIExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUIExtensionsTests.swift; sourceTree = "<group>"; };
@@ -491,6 +500,7 @@
 			children = (
 				E2FE5A5421256D0E00A38D7A /* UniqueValueTests.swift */,
 				E2FE5A5821256D1B00A38D7A /* ConstantKeyTests.swift */,
+				E28DB54F21622E1A00E975CA /* JSONParserTests.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -509,6 +519,7 @@
 			children = (
 				E23E36FB2121925800A81C2A /* UniqueValue.swift */,
 				E2FE5A4B21256C2500A38D7A /* ConstantKey.swift */,
+				E28DB54A21622A8700E975CA /* JSONParser.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1206,6 +1217,7 @@
 				E260542B21218B7600D013B5 /* TimeIntervalExtensions.swift in Sources */,
 				E260544021218B7600D013B5 /* UICollectionViewExtensions.swift in Sources */,
 				E28C30F82148F2B600DE964B /* MutablePropertyExtensions.swift in Sources */,
+				E28DB54B21622A8700E975CA /* JSONParser.swift in Sources */,
 				E260543D21218B7600D013B5 /* URLExtensions.swift in Sources */,
 				E260544221218B7600D013B5 /* BoolExtensions.swift in Sources */,
 				E28C3115214948B300DE964B /* ReachabilityStatus.swift in Sources */,
@@ -1246,6 +1258,7 @@
 				E260545B21218B8C00D013B5 /* UIImageExtensionsTests.swift in Sources */,
 				E25665342126B5390061CCF7 /* UserDefaultsWrapperTests.swift in Sources */,
 				E260546021218B8C00D013B5 /* OptionalExtensionsTests.swift in Sources */,
+				E28DB55021622E1A00E975CA /* JSONParserTests.swift in Sources */,
 				E260545C21218B8C00D013B5 /* UIColorExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1268,6 +1281,7 @@
 				E28123F82122C3DD00E4F6D0 /* IntExtensions.swift in Sources */,
 				E2BC2DBC21538631004395BE /* CodableExtensions.swift in Sources */,
 				E28124072122C41800E4F6D0 /* Logger.swift in Sources */,
+				E28DB54C21622A8700E975CA /* JSONParser.swift in Sources */,
 				E28123FD2122C3DD00E4F6D0 /* URLExtensions.swift in Sources */,
 				E28C310C2149436C00DE964B /* Reachability.swift in Sources */,
 				E28123F02122C3DD00E4F6D0 /* BoolExtensions.swift in Sources */,
@@ -1297,6 +1311,7 @@
 				E2FE5A492122FB9600A38D7A /* LocaleExtensionsTests.swift in Sources */,
 				E2BC2DB5215383BA004395BE /* BoolExtensionsTests.swift in Sources */,
 				E2FE5A5A21256D1B00A38D7A /* ConstantKeyTests.swift in Sources */,
+				E28DB55121622E1A00E975CA /* JSONParserTests.swift in Sources */,
 				E2FE5A432122DE3100A38D7A /* SignalProducerExtensionsTests.swift in Sources */,
 				E28124052122C3FF00E4F6D0 /* URLExtensionsTests.swift in Sources */,
 				E20BA5FF2138806A005BA13B /* CharacterExtensionsTests.swift in Sources */,
@@ -1336,6 +1351,7 @@
 				E2FE59F42122CE4800A38D7A /* CharacterExtensions.swift in Sources */,
 				E2BC2DBD21538632004395BE /* CodableExtensions.swift in Sources */,
 				E2FE5A0F2122CE5400A38D7A /* Logger.swift in Sources */,
+				E28DB54D21622A8700E975CA /* JSONParser.swift in Sources */,
 				E2FE59FE2122CE4800A38D7A /* URLExtensions.swift in Sources */,
 				E28C310D2149436C00DE964B /* Reachability.swift in Sources */,
 				E2FE59EF2122CE4200A38D7A /* StringExtensions.swift in Sources */,
@@ -1367,6 +1383,7 @@
 				E2FE5A5B21256D1B00A38D7A /* ConstantKeyTests.swift in Sources */,
 				E2BC2DB6215383BA004395BE /* BoolExtensionsTests.swift in Sources */,
 				E2FE5A452122DE3200A38D7A /* SignalProducerExtensionsTests.swift in Sources */,
+				E28DB55221622E1A00E975CA /* JSONParserTests.swift in Sources */,
 				E25665362126B53A0061CCF7 /* UserDefaultsWrapperTests.swift in Sources */,
 				E20BA6042138809C005BA13B /* CollectionExtensionsTests.swift in Sources */,
 				E28C31032149117000DE964B /* NSSetExtensionsTests.swift in Sources */,
@@ -1398,6 +1415,7 @@
 				E2FE5A002122CE4900A38D7A /* BoolExtensions.swift in Sources */,
 				E2FE5A032122CE4900A38D7A /* CollectionExtensions.swift in Sources */,
 				E2FE5A062122CE4900A38D7A /* DecimalExtensions.swift in Sources */,
+				E28DB54E21622A8700E975CA /* JSONParser.swift in Sources */,
 				E2FE5A082122CE4900A38D7A /* IntExtensions.swift in Sources */,
 				E2FE5A402122DE1000A38D7A /* SignalProducerExtensions.swift in Sources */,
 				E2FE5A022122CE4900A38D7A /* CharacterExtensions.swift in Sources */,
