@@ -9,6 +9,14 @@ public extension Bool {
         }
     }
     
+    public init?(yesNoString: String) {
+        switch yesNoString.uppercased() {
+        case "YES": self = true
+        case "NO": self = false
+        default: return nil
+        }
+    }
+    
     public init?(oneZeroString: String) {
         switch oneZeroString {
         case "1": self = true
@@ -43,6 +51,10 @@ public extension Bool {
 
     public var onOffString: String {
         return self ? "On" : "Off"
+    }
+    
+    public var yesNoString: String {
+        return self ? "Yes" : "No"
     }
     
     public var trueFalseString: String {

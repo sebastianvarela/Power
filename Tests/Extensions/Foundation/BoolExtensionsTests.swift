@@ -11,6 +11,14 @@ public class BoolExtensionsTests: XCTestCase {
         XCTAssertEqual(Bool(onOffString: "Off"), false)
         XCTAssertNil(Bool(onOffString: "caca"))
 
+        XCTAssertEqual(Bool(yesNoString: "yes"), true)
+        XCTAssertEqual(Bool(yesNoString: "YES"), true)
+        XCTAssertEqual(Bool(yesNoString: "Yes"), true)
+        XCTAssertEqual(Bool(yesNoString: "no"), false)
+        XCTAssertEqual(Bool(yesNoString: "NO"), false)
+        XCTAssertEqual(Bool(yesNoString: "No"), false)
+        XCTAssertNil(Bool(yesNoString: "caca"))
+        
         XCTAssertEqual(Bool(oneZeroString: "1"), true)
         XCTAssertEqual(Bool(oneZeroString: "0"), false)
         XCTAssertNil(Bool(oneZeroString: "caca"))
@@ -47,6 +55,11 @@ public class BoolExtensionsTests: XCTestCase {
         XCTAssertEqual(true.onOffString, "On")
     }
 
+    public func testYesNoString() {
+        XCTAssertEqual(false.yesNoString, "No")
+        XCTAssertEqual(true.yesNoString, "Yes")
+    }
+    
     public func testTrueFalseString() {
         XCTAssertEqual(false.trueFalseString, "False")
         XCTAssertEqual(true.trueFalseString, "True")
