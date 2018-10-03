@@ -72,4 +72,19 @@ public class DateExtensionsTests: XCTestCase {
         
         XCTAssertEqual(dateDiffInSeconds, diffToAdd)
     }
+    
+    public func testExportingDateToISO8601Format() {
+        let date = Date(timeIntervalSince1970: 1_523_190_896)
+ 
+        XCTAssertEqual(date.iso8601String(utc: true), "2018-04-08T12:34:56Z")
+        XCTAssertEqual(date.iso8601String(utc: false, timeZone: TimeZone(secondsFromGMT: 3_600)), "2018-04-08T13:34:56+01:00")
+        XCTAssertEqual(date.iso8601String(utc: false, timeZone: TimeZone(secondsFromGMT: 7_200)), "2018-04-08T14:34:56+02:00")
+    }
+    
+    public func testCreatingDateFromISO8601Date() {
+        XCTAssertEqual(Date(iso8601String: "2018-09-25T15:25:51+02:00")?.iso8601String(utc: true), "2018-09-25T13:25:51Z")
+        XCTAssertEqual(Date(iso8601String: "2015-12-11T20:28:23+0100")?.iso8601String(utc: true), "2015-12-11T19:28:23Z")
+        XCTAssertEqual(Date(iso8601String: "2018-09-25T15:25:51Z")?.iso8601String(utc: true), "2018-09-25T15:25:51Z")
+        XCTAssertNil(Date(iso8601String: "2018-09-02"))
+    }
 }

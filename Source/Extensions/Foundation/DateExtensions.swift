@@ -1,6 +1,15 @@
 import Foundation
 
 public extension Date {
+    public init?(iso8601String: String) {
+        let dateFormatter = ISO8601DateFormatter()
+        dateFormatter.formatOptions = [.withFullTime, .withFullDate, .withTimeZone, .withColonSeparatorInTimeZone]
+        guard let date = dateFormatter.date(from: iso8601String) else {
+            return nil
+        }
+        self = date
+    }
+    
     public func dateByAdding(years: Int) -> Date {
         guard let newDate = Calendar.current.date(byAdding: DateComponents(year: years), to: self) else {
             fatalError("Cannot add \(years) years to date \(self)")
@@ -68,8 +77,19 @@ public extension Date {
         dateFormatter.locale = locale ?? PowerBag.shared.locale.value
         dateFormatter.timeZone = timeZone ?? PowerBag.shared.timeZone.value
         let converted = dateFormatter.string(from: self)
-
         return converted.capitalized
+    }
+    
+    public func iso8601String(utc: Bool, timeZone: TimeZone? = nil) -> String {
+        let dateFormatter = ISO8601DateFormatter()
+        dateFormatter.formatOptions = [.withFullTime, .withFullDate, .withTimeZone, .withColonSeparatorInTimeZone]
+        if utc {
+            dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        } else {
+            dateFormatter.timeZone = timeZone ?? PowerBag.shared.timeZone.value
+        }
+        let converted = dateFormatter.string(from: self)
+        return converted
     }
     
     public func totalDays(from date: Date) -> Int {
