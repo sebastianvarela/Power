@@ -16,7 +16,7 @@ public extension UIView {
     }
     
     public func transition(flipTo destination: UIView, duration: TimeInterval, completion: (() -> Void)? = nil) {
-        let transitionOptions: UIViewAnimationOptions = [.transitionFlipFromRight, .showHideTransitionViews]
+        let transitionOptions: UIView.AnimationOptions = [.transitionFlipFromRight, .showHideTransitionViews]
         
         UIView.transition(with: self,
                           duration: duration,
@@ -39,7 +39,7 @@ public extension UIView {
     }
     
     public func transition(revertFlipTo origin: UIView, duration: TimeInterval, completion: (() -> Void)? = nil) {
-        let transitionOptions: UIViewAnimationOptions = [.transitionFlipFromLeft, .showHideTransitionViews]
+        let transitionOptions: UIView.AnimationOptions = [.transitionFlipFromLeft, .showHideTransitionViews]
         
         UIView.transition(with: origin,
                           duration: duration,

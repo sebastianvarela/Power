@@ -66,11 +66,11 @@ public extension UITableView {
         clipsToBounds = false
         contentInset = UIEdgeInsets(top: 0, left: 0, bottom: bottom, right: 0)
         scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -10)
-        rowHeight = UITableViewAutomaticDimension
+        rowHeight = UITableView.automaticDimension
         estimatedRowHeight = 1
-        sectionHeaderHeight = UITableViewAutomaticDimension
+        sectionHeaderHeight = UITableView.automaticDimension
         estimatedSectionHeaderHeight = 1
-        sectionFooterHeight = UITableViewAutomaticDimension
+        sectionFooterHeight = UITableView.automaticDimension
         estimatedSectionFooterHeight = 1
     }
 }

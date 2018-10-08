@@ -1,4 +1,5 @@
 language: swift
+osx_image: xcode10
 
 before_install:
 - carthage bootstrap --configuration Debug --no-use-binaries --cache-builds
