@@ -11,3 +11,7 @@ public extension Locale {
         return name.capitalized
     }
 }
+
+public extension TimeZone {
+    static let EuropeMadrid = TimeZone(identifier: "Europe/Madrid")
+}
