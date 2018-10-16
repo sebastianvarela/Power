@@ -39,4 +39,12 @@ public class URLExtensionsTests: XCTestCase {
         XCTAssertEqual(query1, [URLQueryItem(name: "home", value: nil), URLQueryItem(name: "hola", value: "chau")])
         XCTAssertEqual(query2, [URLQueryItem(name: "hi", value: nil)])
     }
+    
+    public func testExtractQueryString() {
+        let url = URL.fromString("http://www.google.com/somePath?wawa=wewe&yuyu=yaya")
+        
+        XCTAssertEqual(url.queryStringValue(key: "wawa"), "wewe")
+        XCTAssertEqual(url.queryStringValue(key: "yuyu"), "yaya")
+        XCTAssertEqual(url.queryStringValue(key: "pepe"), nil)
+    }
 }

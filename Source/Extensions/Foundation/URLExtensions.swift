@@ -27,6 +27,13 @@ public extension URL {
         return String(urlAnchor)
     }
     
+    public func queryStringValue(key: String) -> String? {
+        return URLComponents(url: URL.fromString(absoluteString.replacedPercentEncodingFromLatinToUTF8), resolvingAgainstBaseURL: false)?
+            .queryItems?
+            .first { $0.name == key }?
+            .value
+    }
+    
     public static func processQuery(query: String) -> [URLQueryItem] {
         return query.split(separator: "&").map { slice in
             let parts = slice.split(separator: "=")
