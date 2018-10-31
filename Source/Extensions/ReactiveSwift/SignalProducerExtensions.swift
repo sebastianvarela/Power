@@ -53,4 +53,18 @@ public extension SignalProducer {
     public func start<OtherValue>(_ observer: Signal<OtherValue, Error>.Observer, mapValue: @escaping (Value) -> OtherValue) -> Disposable {
         return map(mapValue).start(observer)
     }
+    
+    @discardableResult
+    public func startWithCompletedOnUIScheduler(_ action: @escaping () -> Void) -> Disposable {
+        return start(on: UIScheduler())
+            .startWithCompleted(action)
+    }
+}
+
+public extension SignalProducer where Error == NoError {
+    @discardableResult
+    public func startWithValuesOnUIScheduler(_ action: @escaping (Value) -> Void) -> Disposable {
+        return start(on: UIScheduler())
+            .startWithValues(action)
+    }
 }

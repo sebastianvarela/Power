@@ -268,4 +268,41 @@ public class SignalProducerExtensionsTests: XCTestCase {
         
         waitForExpectations(timeout: 1)
     }
+    
+    public func testStartWithCompletedOnUIScheduler() {
+        let expectCompleted = expectation(description: "Complete event")
+        
+        let producer1 = SignalProducer<Int, NoError> { observer, _ in
+            observer.send(value: 1)
+            observer.sendCompleted()
+        }
+        
+        DispatchQueue.global(qos: .background).async {
+            producer1.startWithCompletedOnUIScheduler {
+                XCTAssertTrue(Thread.isMainThread)
+                expectCompleted.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout: 1)
+    }
+    
+    public func testStartWithValuesOnUIScheduler() {
+        let expectCompleted = expectation(description: "Complete event")
+        
+        let producer1 = SignalProducer<Int, NoError> { observer, _ in
+            observer.send(value: 1)
+            observer.sendCompleted()
+        }
+        
+        DispatchQueue.global(qos: .background).async {
+            producer1.startWithValuesOnUIScheduler { value in
+                XCTAssertTrue(Thread.isMainThread)
+                XCTAssertEqual(value, 1)
+                expectCompleted.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout: 1)
+    }
 }
