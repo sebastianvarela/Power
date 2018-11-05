@@ -2,6 +2,18 @@
 import XCTest
 
 public class DecimalExtensionsTests: XCTestCase {
+    public func testFormattedAmountWithSmallNumberInEnglishFormat() {
+        let amount: Decimal = 0.45
+        
+        XCTAssertEqual(amount.formatted(locale: .english, digits: 2, groupingSize: 3, currency: "U$S"), "0.45 U$S")
+    }
+
+    public func testFormattedAmountWithSmallNumberInSpanishFormat() {
+        let amount: Decimal = 0.30
+        
+        XCTAssertEqual(amount.formatted(locale: .spanish, digits: 2, groupingSize: 3, currency: "€"), "0,30 €")
+    }
+    
     public func testFormattedAmountWithOneDigitsToTwoInEnglishFormat() {
         let amount: Decimal = 1_124.4
         

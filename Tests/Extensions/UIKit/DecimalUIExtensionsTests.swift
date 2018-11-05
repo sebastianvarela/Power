@@ -11,4 +11,13 @@ public class DecimalUIExtensionsTests: XCTestCase {
         
         XCTAssertEqual(attributedString.string, string)
     }
+    
+    public func testFormattedAmountWithDifferentFontsAndSmallAmount() {
+        let amount: Decimal = 0.57
+        
+        let attributedString = amount.formatted(wholeFont: .systemFont(ofSize: 12), decimalFont: .systemFont(ofSize: 10), digits: 3, currency: "€")
+        let string = amount.formatted(digits: 3, currency: "€")
+        
+        XCTAssertEqual(attributedString.string, string)
+    }
 }
