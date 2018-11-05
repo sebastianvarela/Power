@@ -8,8 +8,15 @@ public extension Decimal {
             return "--"
         }
         
-        if self < 1 {
+        if self < 1 && self > 0 {
             stringWithFormat = "0\(stringWithFormat)"
+        }
+        
+        if
+            self < 0 && self > -1,
+            let decimalSeparator = formatter.decimalSeparator.first,
+            let negativeIndex = stringWithFormat.firstIndex(of: decimalSeparator) {
+                stringWithFormat.insert("0", at: negativeIndex)
         }
         
         if let currency = currency {
